@@ -1,90 +1,113 @@
-[![Build Stable](https://github.com/frappe/frappe_docker/actions/workflows/build_stable.yml/badge.svg)](https://github.com/frappe/frappe_docker/actions/workflows/build_stable.yml)
-[![Build Develop](https://github.com/frappe/frappe_docker/actions/workflows/build_develop.yml/badge.svg)](https://github.com/frappe/frappe_docker/actions/workflows/build_develop.yml)
+# 🐳 Tagrit Frappe Docker Dev Setup Guide
 
-Everything about [Frappe](https://github.com/frappe/frappe) and [ERPNext](https://github.com/frappe/erpnext) in containers.
+## 📌 Prerequisites
 
-# Getting Started
+Before starting, ensure your development environment meets the following requirements:
 
-To get started you need [Docker](https://docs.docker.com/get-docker/), [docker-compose](https://docs.docker.com/compose/), and [git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git) setup on your machine. For Docker basics and best practices refer to Docker's [documentation](http://docs.docker.com).
+- **OS:** Linux/macOS/WSL
+- **Docker:** [Installed](https://docs.docker.com/get-docker/)
+- **Docker Compose:** [Installed](https://docs.docker.com/compose/install/)
 
-Once completed, chose one of the following two sections for next steps.
+## 🚀 Installation Steps
 
-### Try in Play With Docker
+### 1️⃣ Clone the Repository
 
-To play in an already set up sandbox, in your browser, click the button below:
-
-<a href="https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/frappe/frappe_docker/main/pwd.yml">
-  <img src="https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png" alt="Try in PWD"/>
-</a>
-
-### Try on your Dev environment
-
-First clone the repo:
-
-```sh
-git clone https://github.com/frappe/frappe_docker
+```bash
+git clone https://github.com/tagrit/frappe_docker.git
 cd frappe_docker
 ```
 
-Then run: `docker compose -f pwd.yml up -d`
+### 2️⃣ Start the Development Environment
 
-### To run on ARM64 architecture follow this instructions
+Use the provided script to set up and start the development environment:
 
-After cloning the repo run this command to build multi-architecture images specifically for ARM64.
+```bash
+./start.sh dev
+```
 
-`docker buildx bake --no-cache --set "*.platform=linux/arm64"`
+This command will:
+- Build required Docker images
+- Set up the Frappe bench and environment
+- Launch containers for backend, frontend, database, etc.
 
-and then
+### 3️⃣ Access the Application
 
-- add `platform: linux/arm64` to all services in the `pwd.yml`
-- replace the current specified versions of erpnext image on `pwd.yml` with `:latest`
+Once the setup is complete, open your browser and visit:
 
-Then run: `docker compose -f pwd.yml up -d`
+👉 [http://app.tagrit.com:8000](http://app.tagrit.com:8000)
 
-## Final steps
+> 🔒 **Note:** Ensure `app.tagrit.com` points to `127.0.0.1` in your `/etc/hosts` file:
+>
+> ```bash
+> sudo nano /etc/hosts
+> ```
+> Add the following line:
+> ```
+> 127.0.0.1 app.tagrit.com
+> ```
 
-Wait for 5 minutes for ERPNext site to be created or check `create-site` container logs before opening browser on port 8080. (username: `Administrator`, password: `admin`)
+You can also access other frontends like:
 
-If you ran in a Dev Docker environment, to view container logs: `docker compose -f pwd.yml logs -f create-site`. Don't worry about some of the initial error messages, some services take a while to become ready, and then they go away.
+👉 [http://kevin.tagrit.com:8082](http://kevin.tagrit.com:8082)
 
-# Documentation
+---
 
-### [Frequently Asked Questions](https://github.com/frappe/frappe_docker/wiki/Frequently-Asked-Questions)
+## 🛠️ Customizing the Code
 
-### [Production](#production)
+Your codebase can be customized in these directories:
 
-- [List of containers](docs/list-of-containers.md)
-- [Single Compose Setup](docs/single-compose-setup.md)
-- [Environment Variables](docs/environment-variables.md)
-- [Single Server Example](docs/single-server-example.md)
-- [Setup Options](docs/setup-options.md)
-- [Site Operations](docs/site-operations.md)
-- [Backup and Push Cron Job](docs/backup-and-push-cronjob.md)
-- [Port Based Multi Tenancy](docs/port-based-multi-tenancy.md)
-- [Migrate from multi-image setup](docs/migrate-from-multi-image-setup.md)
-- [running on linux/mac](docs/setup_for_linux_mac.md)
-- [TLS for local deployment](docs/tls-for-local-deployment.md)
+- `apps/` – contains Frappe and custom apps
+- `sites/` – contains site configurations and files
 
-### [Custom Images](#custom-images)
+After making code or config changes, restart the containers:
 
-- [Custom Apps](docs/custom-apps.md)
-- [Custom Apps with podman](docs/custom-apps-podman.md)
-- [Build Version 10 Images](docs/build-version-10-images.md)
+```bash
+docker compose restart
+```
 
-### [Development](#development)
+Or restart only the backend for faster feedback:
 
-- [Development using containers](docs/development.md)
-- [Bench Console and VSCode Debugger](docs/bench-console-and-vscode-debugger.md)
-- [Connect to localhost services](docs/connect-to-localhost-services-from-containers-for-local-app-development.md)
+```bash
+docker compose restart backend
+```
 
-### [Troubleshoot](docs/troubleshoot.md)
+---
 
-# Contributing
+## 🧪 Useful Development Commands
 
-If you want to contribute to this repo refer to [CONTRIBUTING.md](CONTRIBUTING.md)
+To interact with the environment:
 
-This repository is only for container related stuff. You also might want to contribute to:
+```bash
+# Access the backend container
+docker exec -it frappe-docker-backend-1 bash
 
-- [Frappe framework](https://github.com/frappe/frappe#contributing),
-- [ERPNext](https://github.com/frappe/erpnext#contributing),
-- [Frappe Bench](https://github.com/frappe/bench).
+# Restart bench inside the container
+bench restart
+
+# Run Frappe commands
+bench --site your-site-name console
+bench --site your-site-name migrate
+```
+
+---
+
+## 🔑 Default Admin Credentials
+
+| **Field**   | **Value**         |
+|------------|-------------------|
+| **Username**  | `Administrator`     |
+| **Password** | `admin` *(or set during site install)* |
+
+---
+
+## 🙌 Contribution
+
+We welcome contributions from the community!
+
+1. Fork the repo
+2. Create your feature branch: `git checkout -b ft-your-feature`
+3. Commit your changes: `git commit -m 'Add cool feature'`
+4. Push to the branch: `git push origin ft-your-feature`
+5. Open a pull request ✅
+
+Happy coding with Tagrit + Frappe! 🚀
