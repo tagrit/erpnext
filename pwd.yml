@@ -296,7 +296,6 @@ volumes:
     name: ${LOGS_VOLUME:-logs}
   apps: {}  
 
-
 networks:
   frappe_network:
     driver: bridge
