@@ -1,6 +1,124 @@
-# 🐳 Tagrit Frappe Docker Dev Setup Guide
+# 🚀 Tagrit ERPNEXT Docker Management
 
-## 📌 Prerequisites
+Welcome to the **Tagrit ERPNEXT Docker** setup! This guide will help you manage sites, Docker containers, and development/production environments in a clean and automated way.
+
+---
+
+## 📚 Table of Contents
+
+- [📦 Production Setup](#-production-setup)
+  - [⚙️ Setup](#️-setup)
+  - [🌐 Site Management](#-site-management)
+  - [🐳 Docker Management](#-docker-management)
+- [👨‍💻 Development Setup](#-development-setup)
+---
+
+## 📦 Production Setup
+
+This guide covers how to set up and manage sites in a production environment using Docker and Frappe.
+
+### ⚙️ Setup
+
+_This section is under development — to be updated soon._
+
+---
+
+### 🌐 Site Management
+
+#### ✅ Create a New Site
+
+To create a new site on your production server:
+
+1. **SSH into the server**
+
+   Access your production server via SSH:
+
+ ```bash
+ ssh user@your-production-server
+  ```
+
+2 **Run the `create_site` Command**
+
+Run the site creation script:
+
+```bash
+create_site
+```
+#### Follow the Prompts
+
+- **Domain name**  
+  Enter a domain in the format `*.tagrit.com`, for example:  
+  `doc.tagrit.com`
+
+- **Port number**  
+  Enter the port where the site will run. By default the next available port is selected.So you just click eneter.
+  To check used and available ports, run:
+
+```bash
+ports_in_use
+```
+  
+- **Apps to install**  
+  Enter a comma-separated list of apps to install, such as:
+
+  ```text
+  erpnext,hrms,payments
+  ```
+- **Press Enter and let the script handle the rest.**
+
+#### ❌ Drop a Site
+
+To remove a site completely from your production setup:
+
+```bash
+drop_site doc.tagrit.com
+```
+- **Press Enter and let the script handle the rest. Once done you will get a confirmation message**
+
+✅ Site doc.tagrit.com has been fully removed and system restarted.
+
+
+### 🐳 Docker Management
+
+#### 🛠️ Manage Frappe Docker Containers
+
+Use the `manage_docker_frappe` script to control your Frappe Docker stack:
+
+```bash
+Usage:
+  manage_docker_frappe start             Start or restart the Frappe stack
+  manage_docker_frappe stop              Stop the stack (volumes are preserved)
+  manage_docker_frappe stop --clean      ⚠️ Stop and REMOVE volumes (irreversible)
+  manage_docker_frappe status            Show running Frappe containers
+  manage_docker_frappe help              Show this help message
+```
+#### 📡 Ports in Use
+
+You can check which ports are currently assigned to Frappe frontend containers using:
+
+```bash
+ports_in_use
+```
+- **Press Enter and let the script handle the rest. Once done you will be able to view currently used ports**
+
+🔍 Ports currently used by Frappe frontend containers:
+
+| PORT  | SITE          |
+|-------|---------------|
+| 8080  | 1             |
+| 8081  | default       |
+| 8085  | clientportal  |
+| 8086  | sandbox       |
+
+✅ **Suggested next available port: 8087**
+
+<br><br>
+
+## 👨‍💻 Development Setup
+
+This section helps you spin up a local Frappe + ERPNext environment using Docker.
+
+### 📌 Prerequisites
 
 Before starting, ensure your development environment meets the following requirements:
 
@@ -8,16 +126,16 @@ Before starting, ensure your development environment meets the following require
 - **Docker:** [Installed](https://docs.docker.com/get-docker/)
 - **Docker Compose:** [Installed](https://docs.docker.com/compose/install/)
 
-## 🚀 Installation Steps
+## #🚀 Installation Steps
 
-### 1️⃣ Clone the Repository
+#### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/tagrit/frappe_docker.git
 cd frappe_docker
 ```
 
-### 2️⃣ Start the Development Environment
+#### 2️⃣ Start the Development Environment
 
 Use the provided script to set up and start the development environment:
 
@@ -30,7 +148,7 @@ This command will:
 - Set up the Frappe bench and environment
 - Launch containers for backend, frontend, database, etc.
 
-### 3️⃣ Access the Application
+#### 3️⃣ Access the Application
 
 Once the setup is complete, open your browser and visit:
 
@@ -52,7 +170,7 @@ You can also access other frontends like:
 
 ---
 
-## 🛠️ Customizing the Code
+### 🛠️ Customizing the Code
 
 Your codebase can be customized in these directories:
 
@@ -73,7 +191,7 @@ docker compose restart backend
 
 ---
 
-## 🧪 Useful Development Commands
+### 🧪 Useful Development Commands
 
 To interact with the environment:
 
@@ -91,7 +209,7 @@ bench --site your-site-name migrate
 
 ---
 
-## 🔑 Default Admin Credentials
+### 🔑 Default Admin Credentials
 
 | **Field**   | **Value**         |
 |------------|-------------------|
@@ -100,7 +218,7 @@ bench --site your-site-name migrate
 
 ---
 
-## 🙌 Contribution
+### 🙌 Contribution
 
 We welcome contributions from the community!
 
@@ -111,3 +229,7 @@ We welcome contributions from the community!
 5. Open a pull request ✅
 
 Happy coding with Tagrit + Frappe! 🚀
+
+
+
+
