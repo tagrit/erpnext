@@ -4,8 +4,8 @@ Welcome to the Tagrit ERPNEXT Docker Setup Wiki! Below are guides to help you ma
 
 ## Contents
 
-- [Production Setup](production-setup.md)
-- [Development Setup](development-setup.md)
-- [Site Management](site-management.md)
-- [Docker Management](docker-management.md)
-- [Ports in Use](ports-in-use.md)
+- [Production Setup](https://github.com/tagrit/erpnext/wiki/Production-Setup)
+- [Development Setup](https://github.com/tagrit/erpnext/wiki/Development-Setup)
+- [Site Management](https://github.com/tagrit/erpnext/wiki/Site-Management)
+- [Docker Management](https://github.com/tagrit/erpnext/wiki/Docker-Management)
+- [Ports in Use](https://github.com/tagrit/erpnext/wiki/Ports-in-Use)
