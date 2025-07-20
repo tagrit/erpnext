@@ -1,0 +1,19 @@
+[
+ {
+  "custom": 0,
+  "docstatus": 0,
+  "doctype": "DocType Link",
+  "group": "Dependents and Beneficiaries",
+  "hidden": 0,
+  "is_child_table": 0,
+  "link_doctype": "Employee Dependent and Beneficiary",
+  "link_fieldname": "employee",
+  "modified": "2024-11-16 18:44:16.533443",
+  "name": "fb21q7lhkp",
+  "parent": "Employee",
+  "parent_doctype": null,
+  "parentfield": "links",
+  "parenttype": "DocType",
+  "table_fieldname": null
+ }
+]

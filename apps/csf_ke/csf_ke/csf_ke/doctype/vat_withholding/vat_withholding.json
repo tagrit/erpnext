@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:wht_certificate_no",
+ "creation": "2025-02-21 08:46:31.519775",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "customer",
+  "submit_journal_entry",
+  "column_break_ynaf",
+  "currency",
+  "withholding_account",
+  "allocate_payment",
+  "section_break_onfc",
+  "withholder_pin",
+  "withholdee_pin",
+  "column_break_jghy",
+  "withholder_name",
+  "status",
+  "section_break_iyyv",
+  "voucher_no",
+  "invoice_no",
+  "certificate_date",
+  "column_break_tsyd",
+  "wht_certificate_no",
+  "pay_point_name",
+  "outstanding_amount",
+  "section_break_weug",
+  "vat_withholding_amount",
+  "column_break_xcti",
+  "journal_entry",
+  "section_break_brjw",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_brjw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "VAT Withholding",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "withholder_pin",
+   "fieldtype": "Data",
+   "label": "Withholder PIN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "withholdee_pin",
+   "fieldtype": "Data",
+   "label": "Withholdee PIN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jghy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "withholder_name",
+   "fieldtype": "Data",
+   "label": "Withholder Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive"
+  },
+  {
+   "fieldname": "section_break_iyyv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pay_point_name",
+   "fieldtype": "Data",
+   "label": "Pay Point Name"
+  },
+  {
+   "fieldname": "certificate_date",
+   "fieldtype": "Date",
+   "label": "Certificate Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_tsyd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wht_certificate_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "WHT Certificate No",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_weug",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vat_withholding_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "VAT Withholding Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ynaf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_onfc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "withholding_account",
+   "fieldtype": "Link",
+   "label": "Withholding Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "voucher_no",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Voucher No",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Invoice No",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "submit_journal_entry",
+   "fieldtype": "Check",
+   "label": "Submit Journal Entry"
+  },
+  {
+   "fieldname": "column_break_xcti",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry"
+  },
+  {
+   "fetch_from": "voucher_no.outstanding_amount",
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "allocate_payment",
+   "fieldtype": "Check",
+   "label": "Allocate Payment",
+   "read_only_depends_on": "eval: doc.vat_withholding_amount > doc.outstanding_amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Journal Entry",
+   "link_fieldname": "cheque_no"
+  }
+ ],
+ "modified": "2025-03-12 13:18:12.388717",
+ "modified_by": "Administrator",
+ "module": "CSF KE",
+ "name": "VAT Withholding",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
