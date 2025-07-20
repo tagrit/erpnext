@@ -33,16 +33,6 @@ To create a new site on your production server:
 
 1. **SSH into the server**
 
-   ```bash
-   ssh user@your-production-server
-
-
-#### Create a Site
-
-To create a new site on your production server:
-
-1. **SSH into the server**
-
    Access your production server via SSH:
 
  ```bash
