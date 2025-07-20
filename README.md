@@ -89,14 +89,15 @@ ports_in_use
 
 🔍 Ports currently used by Frappe frontend containers:
 
-##### PORT          SITE                
-------------------------------
-     8080       1                   
-     8081       default             
-     8085       clientportal        
-     8086       sandbox             
+| PORT  | SITE          |
+|-------|---------------|
+| 8080  | 1             |
+| 8081  | default       |
+| 8085  | clientportal  |
+| 8086  | sandbox       |
 
-✅ Suggested next available port: 8087
+✅ **Suggested next available port: 8087**
+
 
 
 
