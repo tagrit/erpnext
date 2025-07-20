@@ -29,9 +29,9 @@ To create a new site on your production server:
 
    Access your production server via SSH:
 
-   ```bash
-   ssh user@your-production-server
-   ```
+ ```bash
+ ssh user@your-production-server
+  ```
 
 2 **Run the `create_site` Command**
 
@@ -40,4 +40,26 @@ Run the site creation script:
 ```bash
 create_site
 ```
+#### Follow the Prompts
+
+- **Domain name**  
+  Enter a domain in the format `*.tagrit.com`, for example:  
+  `doc.tagrit.com`
+
+- **Port number**  
+  Enter the port where the site will run.  
+  To check used and available ports, run:
+
+  ```bash
+  ports_in_use
+  ```
+- **Apps to install**  
+  Enter a comma-separated list of apps to install, such as:
+
+  ```text
+  erpnext,hrms,payments
+``
+- **Press Enter and let the script handle the rest.**
+
+
 
