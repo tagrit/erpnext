@@ -9,10 +9,8 @@ Welcome to the **Tagrit ERPNEXT Docker** setup! This guide will help you manage 
 - [📦 Production Setup](#-production-setup)
   - [⚙️ Setup](#️-setup)
   - [🌐 Site Management](#-site-management)
+  - [🐳 Docker Management](#-docker-management)
 - [👨‍💻 Development Setup](#-development-setup)
-- [🐳 Docker Management](#-docker-management)
-- [📡 Ports in Use](#-ports-in-use)
-
 ---
 
 ## 📦 Production Setup
@@ -75,6 +73,21 @@ drop_site doc.tagrit.com
 
 ✅ Site doc.tagrit.com has been fully removed and system restarted.
 
+
+### 🐳 Docker Management
+
+#### 🛠️ Manage Frappe Docker Containers
+
+Use the `manage_docker_frappe` script to control your Frappe Docker stack:
+
+```bash
+Usage:
+  manage_docker_frappe start             Start or restart the Frappe stack
+  manage_docker_frappe stop              Stop the stack (volumes are preserved)
+  manage_docker_frappe stop --clean      ⚠️ Stop and REMOVE volumes (irreversible)
+  manage_docker_frappe status            Show running Frappe containers
+  manage_docker_frappe help              Show this help message
+```
 #### 📡 Ports in Use
 
 You can check which ports are currently assigned to Frappe frontend containers using:
@@ -94,9 +107,6 @@ ports_in_use
 | 8086  | sandbox       |
 
 ✅ **Suggested next available port: 8087**
-
-
-
 
 
 ## 👨‍💻 Development Setup
