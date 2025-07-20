@@ -53,12 +53,9 @@ create_site
   `doc.tagrit.com`
 
 - **Port number**  
-  Enter the port where the site will run.  
+  Enter the port where the site will run. By default the next available port is selected.
   To check used and available ports, run:
-
-  ```bash
-  ports_in_use
-  ```
+  
 - **Apps to install**  
   Enter a comma-separated list of apps to install, such as:
 
