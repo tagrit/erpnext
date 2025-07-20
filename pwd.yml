@@ -286,7 +286,7 @@ services:
     networks:
       - frappe_network
 
-  frontend-testsite:
+  frontend-default:
     image: kevinamayi20/tagrit-erp:v1.0.2
     platform: linux/arm64
     depends_on:
@@ -298,7 +298,7 @@ services:
       - nginx-entrypoint.sh
     environment:
       BACKEND: backend:8000
-      FRAPPE_SITE_NAME_HEADER: testsite.tagrit.com
+      FRAPPE_SITE_NAME_HEADER: default.tagrit.com
       SOCKETIO: websocket:9000
       UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
       UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
