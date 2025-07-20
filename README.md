@@ -67,6 +67,18 @@ create_site
   ```
 - **Press Enter and let the script handle the rest.**
 
+#### ❌ Drop a Site
+
+To remove a site completely from your production setup:
+
+```bash
+drop_site doc.tagrit.com
+```
+- **Press Enter and let the script handle the rest. Once done you will get a confirmation message**
+
+✅ Site doc.tagrit.com has been fully removed and system restarted.
+
+
 ## 👨‍💻 Development Setup
 
 This section helps you spin up a local Frappe + ERPNext environment using Docker.
