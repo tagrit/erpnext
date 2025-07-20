@@ -58,7 +58,7 @@ create_site
 
   ```text
   erpnext,hrms,payments
-``
+  ```
 - **Press Enter and let the script handle the rest.**
 
 
