@@ -1,4 +1,4 @@
-# 🚀 Tagrit ERPNEXT Docker Setup
+# 🚀 Tagrit ERPNEXT Docker Management
 
 Welcome to the **Tagrit ERPNEXT Docker** setup! This guide will help you manage sites, Docker containers, and development/production environments in a clean and automated way.
 
