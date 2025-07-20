@@ -78,6 +78,27 @@ drop_site doc.tagrit.com
 
 ✅ Site doc.tagrit.com has been fully removed and system restarted.
 
+#### 📡 Ports in Use
+
+You can check which ports are currently assigned to Frappe frontend containers using:
+
+```bash
+ports_in_use
+```
+- **Press Enter and let the script handle the rest. Once done you will be able to view currently used ports**
+
+🔍 Ports currently used by Frappe frontend containers:
+
+PORT       SITE                
+------------------------------
+8080       1                   
+8081       default             
+8085       clientportal        
+8086       sandbox             
+
+✅ No ports in use. Suggested starting port: 8081
+
+
 
 ## 👨‍💻 Development Setup
 
