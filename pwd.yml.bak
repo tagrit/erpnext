@@ -82,6 +82,16 @@ services:
             exit 1
           fi
         done;
+        echo "sites/common_site_config.json found";
+        bench new-site app.tagrit.com \
+         --mariadb-user-host-login-scope='%' \
+         --admin-password=admin \
+         --db-root-username=root \
+         --db-root-password=admin \
+         --install-app erpnext \
+         --install-app hrms && \
+         echo "app.tagrit.com" > sites/currentsite.txt && \
+         bench --site app.tagrit.com migrate;
 
   db:
     image: mariadb:10.6
@@ -105,6 +115,34 @@ services:
       MARIADB_ROOT_PASSWORD: admin
     volumes:
       - db-data:/var/lib/mysql
+
+  frontend:
+    image: kevinamayi20/tagrit-erp:${TAG:-v1.0.2}
+    platform: linux/arm64
+    networks:
+      - frappe_network
+    depends_on:
+      - websocket
+    deploy:
+      restart_policy:
+        condition: on-failure
+    command:
+      - nginx-entrypoint.sh
+    environment:
+      BACKEND: backend:8000
+      FRAPPE_SITE_NAME_HEADER: app.tagrit.com
+      SOCKETIO: websocket:9000
+      UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
+      UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
+      UPSTREAM_REAL_IP_RECURSIVE: "off"
+      PROXY_READ_TIMEOUT: 120
+      CLIENT_MAX_BODY_SIZE: 50m
+    volumes:
+      - ${APPS_MOUNT:-apps}:/home/frappe/frappe-bench/apps
+      - ${SITES_MOUNT:-sites}:/home/frappe/frappe-bench/sites
+      - logs:/home/frappe/frappe-bench/logs
+    ports:
+      - "8080:8080"
 
   queue-long:
     image: kevinamayi20/tagrit-erp:${TAG:-v1.0.2}
@@ -193,34 +231,6 @@ services:
       - ${APPS_MOUNT:-apps}:/home/frappe/frappe-bench/apps
       - ${SITES_MOUNT:-sites}:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
-
-  frontend-app:
-    image: kevinamayi20/tagrit-erp:v1.0.2
-    platform: linux/arm64
-    depends_on:
-      - websocket
-    deploy:
-      restart_policy:
-        condition: on-failure
-    command:
-      - nginx-entrypoint.sh
-    environment:
-      BACKEND: backend:8000
-      FRAPPE_SITE_NAME_HEADER: app.tagrit.com
-      SOCKETIO: websocket:9000
-      UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
-      UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
-      UPSTREAM_REAL_IP_RECURSIVE: "off"
-      PROXY_READ_TIMEOUT: 120
-      CLIENT_MAX_BODY_SIZE: 50m
-    volumes:
-      - apps:/home/frappe/frappe-bench/apps
-      - sites:/home/frappe/frappe-bench/sites
-      - logs:/home/frappe/frappe-bench/logs
-    ports:
-      - "8081:8080"
-    networks:
-      - frappe_network
 
 volumes:
   db-data:
