@@ -61,9 +61,9 @@ ports_in_use
 - **Apps to install**  
   Enter a comma-separated list of apps to install, such as:
 
-  ```text
-  erpnext,hrms,payments
-  ```
+```text
+erpnext,hrms,payments
+```
 - **Press Enter and let the script handle the rest.**
 
 #### ❌ Drop a Site
