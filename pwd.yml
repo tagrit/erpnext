@@ -2,7 +2,7 @@ version: "3"
 
 services:
   backend:
-    image: kevinamayi20/tagrit-erp:${TAG:-v1.0.2}
+    image: kevinamayi20/tagrit-erp:${TAG:-2.0.0}
     platform: linux/arm64
     networks:
       - frappe_network
@@ -20,7 +20,7 @@ services:
       MARIADB_ROOT_PASSWORD: admin
 
   configurator:
-    image: kevinamayi20/tagrit-erp:${TAG:-v1.0.2}
+    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
     platform: linux/arm64
     networks:
       - frappe_network
@@ -51,7 +51,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   create-site:
-    image: kevinamayi20/tagrit-erp:${TAG:-v1.0.2}
+    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
     platform: linux/arm64
     networks:
       - frappe_network
@@ -107,7 +107,7 @@ services:
       - db-data:/var/lib/mysql
 
   queue-long:
-    image: kevinamayi20/tagrit-erp:${TAG:-v1.0.2}
+    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.2}
     platform: linux/arm64
     networks:
       - frappe_network
@@ -125,7 +125,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   queue-short:
-    image: kevinamayi20/tagrit-erp:${TAG:-v1.0.2}
+    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
     platform: linux/arm64
     networks:
       - frappe_network
@@ -163,7 +163,7 @@ services:
         condition: on-failure
 
   scheduler:
-    image: kevinamayi20/tagrit-erp:${TAG:-v1.0.2}
+    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
     platform: linux/arm64
     networks:
       - frappe_network
@@ -179,7 +179,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   websocket:
-    image: kevinamayi20/tagrit-erp:${TAG:-v1.0.2}
+    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
     platform: linux/arm64
     networks:
       - frappe_network
@@ -195,7 +195,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   frontend-app:
-    image: kevinamayi20/tagrit-erp:v1.0.2
+    image: kevinamayi20/tagrit-erp:2.0.0
     platform: linux/arm64
     depends_on:
       - websocket
