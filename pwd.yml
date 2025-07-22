@@ -194,7 +194,7 @@ services:
       - ${SITES_MOUNT:-sites}:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
 
-  frontend-app:
+  frontend-apps:
     image: kevinamayi20/tagrit-erp:2.0.0
     platform: linux/arm64
     depends_on:
@@ -206,7 +206,7 @@ services:
       - nginx-entrypoint.sh
     environment:
       BACKEND: backend:8000
-      FRAPPE_SITE_NAME_HEADER: app.tagrit.com
+      FRAPPE_SITE_NAME_HEADER: apps.tagrit.com
       SOCKETIO: websocket:9000
       UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
       UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
