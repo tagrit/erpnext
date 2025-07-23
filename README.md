@@ -64,6 +64,14 @@ ports_in_use
 ```text
 erpnext,hrms,payments
 ```
+
+- **Type all to install to install all the apps**  
+  Enter a comma-separated list of apps to install, such as:
+
+```text
+all
+```
+
 - **Press Enter and let the script handle the rest.**
 
 #### ❌ Drop a Site
