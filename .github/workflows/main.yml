@@ -1,0 +1,45 @@
+name: Build and Push Multi-Arch Image
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Docker Image Tag (e.g., v3.0.0)'
+        required: false
+        default: 'v3.0.0'
+
+env:
+  DOCKER_IMAGE: kevinamayi20/tagrit-erp
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: images/custom/Containerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ${{ env.DOCKER_IMAGE }}:${{ github.event.inputs.tag || 'v3.0.0' }}
+          build-args: |
+            FRAPPE_PATH=https://github.com/frappe/frappe
+            FRAPPE_BRANCH=version-15
+            PYTHON_VERSION=3.11.9
+            NODE_VERSION=20.19.2
+            APPS_JSON_BASE64=${{ secrets.APPS_JSON_BASE64 }}

@@ -2,7 +2,7 @@ version: "3"
 
 services:
   backend:
-    image: kevinamayi20/tagrit-erp:${TAG:-2.0.0}
+    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
     platform: linux/arm64
     networks:
       - frappe_network
@@ -275,34 +275,6 @@ services:
       - logs:/home/frappe/frappe-bench/logs
     ports:
       - "8084:8080"
-    networks:
-      - frappe_network
-
-  frontend-playground:
-    image: kevinamayi20/tagrit-erp:v2.0.0
-    platform: linux/arm64
-    depends_on:
-      - websocket
-    deploy:
-      restart_policy:
-        condition: on-failure
-    command:
-      - nginx-entrypoint.sh
-    environment:
-      BACKEND: backend:8000
-      FRAPPE_SITE_NAME_HEADER: playground.tagrit.com
-      SOCKETIO: websocket:9000
-      UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
-      UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
-      UPSTREAM_REAL_IP_RECURSIVE: "off"
-      PROXY_READ_TIMEOUT: 120
-      CLIENT_MAX_BODY_SIZE: 50m
-    volumes:
-      - apps:/home/frappe/frappe-bench/apps
-      - sites:/home/frappe/frappe-bench/sites
-      - logs:/home/frappe/frappe-bench/logs
-    ports:
-      - "8085:8080"
     networks:
       - frappe_network
 
