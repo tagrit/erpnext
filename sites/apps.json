@@ -1,0 +1,121 @@
+{
+    "frappe": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 1,
+        "version": "15.74.1"
+    },
+    "erpnext": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "196c3fc6564e4be93a9afee6ba3d114d22e28c1a",
+            "branch": "version-15"
+        },
+        "required": [],
+        "idx": 2,
+        "version": "15.70.2"
+    },
+    "hrms": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "335e25c57bb8bacad670087ed9ad2ede3893e137",
+            "branch": "version-15"
+        },
+        "required": [],
+        "idx": 3,
+        "version": "15.47.7"
+    },
+    "wiki": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "2315dea80a73cb23f307a835fdda2b828791bc51",
+            "branch": "version-14"
+        },
+        "required": [],
+        "idx": 4,
+        "version": "2.0.0"
+    },
+    "propms": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "a58d9804b57d91f2f965b1a19c5bf983067eb9ec",
+            "branch": "version-15"
+        },
+        "required": [],
+        "idx": 5,
+        "version": "15.0.1"
+    },
+    "healthcare": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "83947b657e11ae2c76aa176cdf5e0918dd43e3b3",
+            "branch": "version-15"
+        },
+        "required": [],
+        "idx": 6,
+        "version": "15.1.4"
+    },
+    "csf_ke": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "ff5c599e6aa642a0dafa95146800b7cb396c3665",
+            "branch": "version-15"
+        },
+        "required": [],
+        "idx": 7,
+        "version": "2.1.5"
+    },
+    "payments": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "e594b60788c3bfaad01dc5dc6e6b281f352a4340",
+            "branch": "version-15"
+        },
+        "required": [],
+        "idx": 8,
+        "version": "0.0.1"
+    },
+    "insights": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "6f8d02ef79c373b579f28fc418003c45f8a375ad",
+            "branch": "version-3"
+        },
+        "required": [],
+        "idx": 9,
+        "version": "3.2.7"
+    },
+    "education": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "d15e0be1983bf9c72fc6b5f9a7b46f8e43af577a",
+            "branch": "version-15"
+        },
+        "required": [],
+        "idx": 10,
+        "version": "15.0.0"
+    },
+    "lending": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "2f2fbbafbd9bd7417a70cf2ea8b4b66008ba536d",
+            "branch": "version-15"
+        },
+        "required": [],
+        "idx": 11,
+        "version": "0.0.1"
+    },
+    "kenya_compliance_via_slade": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "2ed4c4ae57e81f56b80b94f24497ee3fe49cc5d3",
+            "branch": "version-15"
+        },
+        "required": [],
+        "idx": 12,
+        "version": "0.8.2"
+    }
+}

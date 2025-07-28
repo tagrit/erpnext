@@ -1,0 +1,12 @@
+csf_ke
+education
+erpnext
+frappe
+healthcare
+hrms
+insights
+kenya_compliance_via_slade
+lending
+payments
+propms
+wiki
