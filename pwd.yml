@@ -195,7 +195,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   frontend-sandbox:
-    image: kevinamayi20/tagrit-erp:v2.0.0
+    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
     platform: linux/arm64
     depends_on:
       - websocket
@@ -214,8 +214,8 @@ services:
       PROXY_READ_TIMEOUT: 120
       CLIENT_MAX_BODY_SIZE: 50m
     volumes:
-      - apps:/home/frappe/frappe-bench/apps
-      - sites:/home/frappe/frappe-bench/sites
+      - ${APPS_MOUNT:-apps}:/home/frappe/frappe-bench/apps
+      - ${SITES_MOUNT:-sites}:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
     ports:
       - "8082:8080"
@@ -223,7 +223,7 @@ services:
       - frappe_network
 
   frontend-clientdemo:
-    image: kevinamayi20/tagrit-erp:v2.0.0
+    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
     platform: linux/arm64
     depends_on:
       - websocket
@@ -242,8 +242,8 @@ services:
       PROXY_READ_TIMEOUT: 120
       CLIENT_MAX_BODY_SIZE: 50m
     volumes:
-      - apps:/home/frappe/frappe-bench/apps
-      - sites:/home/frappe/frappe-bench/sites
+      - ${APPS_MOUNT:-apps}:/home/frappe/frappe-bench/apps
+      - ${SITES_MOUNT:-sites}:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
     ports:
       - "8083:8080"
@@ -251,7 +251,7 @@ services:
       - frappe_network
 
   frontend-hub:
-    image: kevinamayi20/tagrit-erp:v2.0.0
+    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
     platform: linux/arm64
     depends_on:
       - websocket
@@ -270,8 +270,8 @@ services:
       PROXY_READ_TIMEOUT: 120
       CLIENT_MAX_BODY_SIZE: 50m
     volumes:
-      - apps:/home/frappe/frappe-bench/apps
-      - sites:/home/frappe/frappe-bench/sites
+      - ${APPS_MOUNT:-apps}:/home/frappe/frappe-bench/apps
+      - ${SITES_MOUNT:-sites}:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
     ports:
       - "8084:8080"
