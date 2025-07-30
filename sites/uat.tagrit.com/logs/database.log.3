@@ -1,0 +1,3093 @@
+2025-07-30 12:59:59,436 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCompany` ADD COLUMN `security_account_code` varchar(140), ADD COLUMN `default_tax_account_head` varchar(140), ADD COLUMN `default_tax_template` varchar(140), ADD COLUMN `default_maintenance_tax_template` varchar(140)
+2025-07-30 12:59:59,446 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCompany` MODIFY `monthly_sales_target` decimal(21,9) not null default 0, MODIFY `total_monthly_sales` decimal(21,9) not null default 0, MODIFY `credit_limit` decimal(21,9) not null default 0
+2025-07-30 12:59:59,513 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIssue` ADD COLUMN `property_name` varchar(140), ADD COLUMN `person_in_charge` varchar(140), ADD COLUMN `sub_contractor_contact` varchar(140), ADD COLUMN `person_in_charge_name` varchar(140), ADD COLUMN `sub_contractor_name` varchar(140), ADD COLUMN `defect_found` longtext, ADD COLUMN `customer_feedback` longtext
+2025-07-30 12:59:59,521 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIssue` MODIFY `avg_response_time` decimal(21,9), MODIFY `first_response_time` decimal(21,9), MODIFY `resolution_time` decimal(21,9), MODIFY `total_hold_time` decimal(21,9), MODIFY `user_resolution_time` decimal(21,9)
+2025-07-30 12:59:59,618 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSales Invoice` ADD COLUMN `lease` varchar(140), ADD COLUMN `lease_item` varchar(140), ADD COLUMN `job_card` varchar(140)
+2025-07-30 12:59:59,628 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSales Invoice` MODIFY `write_off_amount` decimal(21,9) not null default 0, MODIFY `conversion_rate` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `base_net_total` decimal(21,9) not null default 0, MODIFY `total_advance` decimal(21,9) not null default 0, MODIFY `base_write_off_amount` decimal(21,9) not null default 0, MODIFY `loyalty_amount` decimal(21,9) not null default 0, MODIFY `commission_rate` decimal(21,9) not null default 0, MODIFY `total_net_weight` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `rounded_total` decimal(21,9) not null default 0, MODIFY `base_discount_amount` decimal(21,9) not null default 0, MODIFY `outstanding_amount` decimal(21,9) not null default 0, MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `plc_conversion_rate` decimal(21,9) not null default 0, MODIFY `additional_discount_percentage` decimal(21,9) not null default 0, MODIFY `amount_eligible_for_commission` decimal(21,9) not null default 0, MODIFY `rounding_adjustment` decimal(21,9) not null default 0, MODIFY `base_grand_total` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `total_billing_hours` decimal(21,9) not null default 0, MODIFY `base_paid_amount` decimal(21,9) not null default 0, MODIFY `total_commission` decimal(21,9) not null default 0, MODIFY `base_rounding_adjustment` decimal(21,9) not null default 0, MODIFY `paid_amount` decimal(21,9) not null default 0, MODIFY `base_change_amount` decimal(21,9) not null default 0, MODIFY `change_amount` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0
+2025-07-30 12:59:59,710 WARNING database DDL Query made to DB:
+ALTER TABLE `tabQuotation` ADD COLUMN `cost_center` varchar(140)
+2025-07-30 12:59:59,721 WARNING database DDL Query made to DB:
+ALTER TABLE `tabQuotation` MODIFY `base_grand_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `base_rounding_adjustment` decimal(21,9) not null default 0, MODIFY `total_net_weight` decimal(21,9) not null default 0, MODIFY `rounding_adjustment` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `rounded_total` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `conversion_rate` decimal(21,9) not null default 0, MODIFY `plc_conversion_rate` decimal(21,9) not null default 0, MODIFY `base_net_total` decimal(21,9) not null default 0, MODIFY `base_discount_amount` decimal(21,9) not null default 0, MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0, MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `additional_discount_percentage` decimal(21,9) not null default 0
+2025-07-30 12:59:59,787 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMaterial Request` ADD COLUMN `sales_invoice` varchar(140)
+2025-07-30 12:59:59,796 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMaterial Request` MODIFY `per_ordered` decimal(21,9) not null default 0, MODIFY `per_received` decimal(21,9) not null default 0
+2025-07-30 12:59:59,846 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIssue Materials Detail` ADD COLUMN `mateiral_request` varchar(140)
+2025-07-30 12:59:59,853 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIssue Materials Detail` MODIFY `amount` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0
+2025-07-30 12:59:59,916 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMaterial Request Item` ADD COLUMN `material_request` varchar(140)
+2025-07-30 12:59:59,926 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMaterial Request Item` MODIFY `received_qty` decimal(21,9) not null default 0, MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `ordered_qty` decimal(21,9) not null default 0, MODIFY `price_list_rate` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0, MODIFY `min_order_qty` decimal(21,9) not null default 0, MODIFY `projected_qty` decimal(21,9) not null default 0, MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0
+2025-07-30 13:00:00,014 WARNING database DDL Query made to DB:
+ALTER TABLE `tabItem` ADD COLUMN `reading_required` int(1) not null default 0
+2025-07-30 13:00:00,023 WARNING database DDL Query made to DB:
+ALTER TABLE `tabItem` MODIFY `over_billing_allowance` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `standard_rate` decimal(21,9) not null default 0, MODIFY `opening_stock` decimal(21,9) not null default 0, MODIFY `total_projected_qty` decimal(21,9) not null default 0, MODIFY `safety_stock` decimal(21,9) not null default 0, MODIFY `last_purchase_rate` decimal(21,9) not null default 0, MODIFY `over_delivery_receipt_allowance` decimal(21,9) not null default 0, MODIFY `max_discount` decimal(21,9) not null default 0
+2025-07-30 13:00:00,212 WARNING database DDL Query made to DB:
+ALTER TABLE `tabProperty` ADD COLUMN `territory` varchar(140)
+2025-07-30 13:00:00,219 WARNING database DDL Query made to DB:
+ALTER TABLE `tabProperty` MODIFY `rent` decimal(21,9) not null default 0, MODIFY `builtup_area` decimal(21,9) not null default 0, MODIFY `security_deposit` decimal(21,9) not null default 0, MODIFY `carpet_area` decimal(21,9) not null default 0
+2025-07-30 13:00:06,375 WARNING database DDL Query made to DB:
+create table `tabDrug Prescription` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`medication` varchar(140),
+`drug_code` varchar(140),
+`drug_name` varchar(140),
+`strength` decimal(21,9) not null default 0,
+`strength_uom` varchar(140),
+`dosage_form` varchar(140),
+`dosage_by_interval` int(1) not null default 0,
+`dosage` varchar(140),
+`interval` int(11) not null default 0,
+`interval_uom` varchar(140),
+`period` varchar(140),
+`number_of_repeats_allowed` decimal(21,9) not null default 0,
+`intent` varchar(140),
+`priority` varchar(140),
+`medication_request` varchar(140),
+`comment` text,
+`update_schedule` int(1) not null default 1,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:06,571 WARNING database DDL Query made to DB:
+create table `tabExercise Type Step` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`title` varchar(140),
+`image` text,
+`description` longtext,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:06,708 WARNING database DDL Query made to DB:
+create table `tabExercise Difficulty Level` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`difficulty_level` varchar(140) unique,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:06,876 WARNING database DDL Query made to DB:
+create table `tabTherapy Type` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`disabled` int(1) not null default 0,
+`therapy_type` varchar(140) unique,
+`medical_department` varchar(140),
+`description` text,
+`default_duration` int(11) not null default 0,
+`healthcare_service_unit` varchar(140),
+`nursing_checklist_template` varchar(140),
+`item` varchar(140),
+`item_code` varchar(140),
+`item_name` varchar(140),
+`item_group` varchar(140),
+`is_billable` int(1) not null default 0,
+`rate` decimal(21,9) not null default 0,
+`change_in_item` int(1) not null default 0,
+`patient_care_type` varchar(140),
+`staff_role` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:07,061 WARNING database DDL Query made to DB:
+create table `tabDescriptive Test Result` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`lab_test_particulars` varchar(140),
+`result_value` text,
+`allow_blank` int(1) not null default 1,
+`template` varchar(140),
+`require_result_value` int(1) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:07,189 WARNING database DDL Query made to DB:
+create table `tabPatient Relation` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`patient` varchar(140),
+`relation` varchar(140),
+`description` text,
+index `relation`(`relation`),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:07,330 WARNING database DDL Query made to DB:
+create table `tabHealthcare Service Unit Type` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`disabled` int(1) not null default 0,
+`service_unit_type` varchar(140) unique,
+`allow_appointments` int(1) not null default 0,
+`overlap_appointments` int(1) not null default 0,
+`inpatient_occupancy` int(1) not null default 0,
+`is_billable` int(1) not null default 0,
+`item` varchar(140),
+`item_code` varchar(140),
+`item_group` varchar(140),
+`uom` varchar(140),
+`no_of_hours` int(11) not null default 0,
+`rate` decimal(21,9) not null default 0,
+`description` text,
+`change_in_item` int(1) not null default 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:07,462 WARNING database DDL Query made to DB:
+create table `tabExercise` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`exercise_type` varchar(140),
+`difficulty_level` varchar(140),
+`counts_target` int(11) not null default 0,
+`counts_completed` int(11) not null default 0,
+`assistance_level` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:07,604 WARNING database DDL Query made to DB:
+create table `tabNursing Checklist Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`disabled` int(1) not null default 0,
+`title` varchar(140) unique,
+`department` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:07,747 WARNING database DDL Query made to DB:
+create table `tabDiagnosis` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`diagnosis` varchar(140) unique,
+`estimated_duration` decimal(21,9),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:07,978 WARNING database DDL Query made to DB:
+create table `tabPatient Encounter Diagnosis` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`diagnosis` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:08,097 WARNING database DDL Query made to DB:
+create table `tabNursing Checklist Template Task` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`activity` varchar(140),
+`mandatory` int(1) not null default 0,
+`type` varchar(140),
+`time_offset` decimal(21,9),
+`description` text,
+`task_duration` decimal(21,9),
+`task_doctype` varchar(140),
+`role` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:08,247 WARNING database DDL Query made to DB:
+create table `tabInpatient Medication Order` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`patient_encounter` varchar(140),
+`patient` varchar(140),
+`patient_name` varchar(140),
+`patient_age` varchar(140),
+`inpatient_record` varchar(140),
+`company` varchar(140),
+`status` varchar(140),
+`practitioner` varchar(140),
+`start_date` date,
+`end_date` date,
+`total_orders` decimal(21,9) not null default 0,
+`completed_orders` decimal(21,9) not null default 0,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:08,396 WARNING database DDL Query made to DB:
+create table `tabObservation Component` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`observation_template` varchar(140),
+`abbr` varchar(140),
+`condition` longtext,
+`based_on_formula` int(1) not null default 0,
+`formula` longtext,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:08,592 WARNING database DDL Query made to DB:
+create table `tabHealthcare Practitioner` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`first_name` varchar(140),
+`middle_name` varchar(140),
+`last_name` varchar(140),
+`practitioner_name` varchar(140),
+`gender` varchar(140),
+`image` text,
+`status` varchar(140) default 'Active',
+`mobile_phone` varchar(140),
+`residence_phone` varchar(140),
+`office_phone` varchar(140),
+`practitioner_type` varchar(140) default 'Internal',
+`employee` varchar(140),
+`supplier` varchar(140),
+`department` varchar(140),
+`designation` varchar(140),
+`user_id` varchar(140),
+`hospital` varchar(140),
+`google_calendar` varchar(140),
+`op_consulting_charge_item` varchar(140),
+`op_consulting_charge` decimal(21,9) not null default 0,
+`inpatient_visit_charge_item` varchar(140),
+`inpatient_visit_charge` decimal(21,9) not null default 0,
+`default_currency` varchar(140),
+`practitioner_primary_contact` varchar(140),
+`mobile_no` varchar(140),
+`email_id` varchar(140),
+`practitioner_primary_address` varchar(140),
+`primary_address` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `practitioner_name`(`practitioner_name`),
+index `user_id`(`user_id`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:08,764 WARNING database DDL Query made to DB:
+create table `tabPrescription Dosage` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`dosage` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:08,916 WARNING database DDL Query made to DB:
+create table `tabInpatient Occupancy` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`service_unit` varchar(140),
+`check_in` datetime(6),
+`left` int(1) not null default 0,
+`check_out` datetime(6),
+`invoiced` int(1) not null default 0,
+index `left`(`left`),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:09,052 WARNING database DDL Query made to DB:
+create table `tabCode Value Set` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`code_system` varchar(140),
+`system_uri` varchar(140) unique,
+`value_set` varchar(140) unique,
+`description` text,
+`status` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:09,189 WARNING database DDL Query made to DB:
+create table `tabInpatient Medication Order Entry` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`drug` varchar(140),
+`drug_name` varchar(140),
+`dosage` decimal(21,9) not null default 0,
+`dosage_form` varchar(140),
+`instructions` text,
+`date` date,
+`time` time(6),
+`is_completed` int(1) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:09,330 WARNING database DDL Query made to DB:
+create table `tabExercise Type` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`exercise_name` varchar(140),
+`difficulty_level` varchar(140),
+`description` longtext,
+`exercise_steps` text,
+`exercise_video` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:09,520 WARNING database DDL Query made to DB:
+create table `tabHealthcare Service Unit` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`healthcare_service_unit_name` varchar(140),
+`is_group` int(1) not null default 0,
+`service_unit_type` varchar(140),
+`allow_appointments` int(1) not null default 0,
+`overlap_appointments` int(1) not null default 0,
+`service_unit_capacity` int(11) not null default 0,
+`inpatient_occupancy` int(1) not null default 0,
+`occupancy_status` varchar(140),
+`company` varchar(140),
+`warehouse` varchar(140),
+`parent_healthcare_service_unit` varchar(140),
+`lft` int(11) not null default 0,
+`rgt` int(11) not null default 0,
+`old_parent` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `inpatient_occupancy`(`inpatient_occupancy`),
+index `company`(`company`),
+index `lft`(`lft`),
+index `rgt`(`rgt`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:09,621 WARNING database DDL Query made to DB:
+alter table `tabHealthcare Service Unit`
+					add unique `unique_service_unit_company`(healthcare_service_unit_name, company)
+2025-07-30 13:00:09,709 WARNING database DDL Query made to DB:
+create table `tabCode Value` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`code_system` varchar(140),
+`system_uri` varchar(140),
+`experimental` int(1) not null default 0,
+`immutable` int(1) not null default 0,
+`complete` int(1) not null default 0,
+`code_value` varchar(140),
+`value_set` varchar(140),
+`display` text,
+`status` varchar(140),
+`version` varchar(140),
+`level` int(10) not null default 0,
+`definition` text,
+`official_url` varchar(140),
+`canonical_mapping` varchar(140),
+`custom` int(1) not null default 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `code_system`(`code_system`),
+index `system_uri`(`system_uri`),
+index `code_value`(`code_value`),
+index `version`(`version`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:09,870 WARNING database DDL Query made to DB:
+create table `tabDosage Strength` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`strength` decimal(21,9) not null default 0,
+`strength_time` time(6),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:10,007 WARNING database DDL Query made to DB:
+create table `tabClinical Procedure Item` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`item_code` varchar(140),
+`item_name` varchar(140),
+`qty` decimal(21,9) not null default 0,
+`barcode` varchar(140),
+`uom` varchar(140),
+`invoice_separately_as_consumables` int(1) not null default 0,
+`batch_no` varchar(140),
+`conversion_factor` decimal(21,9) not null default 0,
+`stock_uom` varchar(140),
+`transfer_qty` decimal(21,9) not null default 0,
+`actual_qty` decimal(21,9) not null default 0,
+index `item_code`(`item_code`),
+index `actual_qty`(`actual_qty`),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:10,124 WARNING database DDL Query made to DB:
+create table `tabOrganism Test Item` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`organism` varchar(140),
+`colony_population` text,
+`colony_uom` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:10,328 WARNING database DDL Query made to DB:
+create table `tabInpatient Record` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`patient` varchar(140),
+`patient_name` varchar(140),
+`gender` varchar(140),
+`blood_group` varchar(140),
+`dob` date,
+`mobile` varchar(140),
+`email` varchar(140),
+`phone` varchar(140),
+`company` varchar(140),
+`status` varchar(140) default 'Admission Scheduled',
+`scheduled_date` date,
+`admitted_datetime` datetime(6),
+`expected_discharge` date,
+`admission_encounter` varchar(140),
+`admission_practitioner` varchar(140),
+`medical_department` varchar(140),
+`admission_ordered_for` date,
+`admission_service_unit_type` varchar(140),
+`admission_nursing_checklist_template` varchar(140),
+`discharge_nursing_checklist_template` varchar(140),
+`expected_length_of_stay` int(11) not null default 0,
+`primary_practitioner` varchar(140),
+`secondary_practitioner` varchar(140),
+`admission_instruction` text,
+`therapy_plan` varchar(140),
+`discharge_ordered_date` date,
+`discharge_practitioner` varchar(140),
+`discharge_encounter` varchar(140),
+`discharge_datetime` datetime(6),
+`discharge_instructions` text,
+`followup_date` date,
+`discharge_note` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:10,570 WARNING database DDL Query made to DB:
+create table `tabPatient Appointment` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`title` varchar(140),
+`status` varchar(140),
+`appointment_type` varchar(140),
+`appointment_for` varchar(140),
+`company` varchar(140),
+`practitioner` varchar(140),
+`practitioner_name` varchar(140),
+`department` varchar(140),
+`service_unit` varchar(140),
+`appointment_date` date,
+`patient` varchar(140),
+`patient_name` varchar(140),
+`inpatient_record` varchar(140),
+`patient_sex` varchar(140),
+`patient_age` varchar(140),
+`duration` int(11) not null default 0,
+`reference_doctype` varchar(140),
+`reference_docname` varchar(140),
+`service_request` varchar(140),
+`procedure_template` varchar(140),
+`procedure_prescription` varchar(140),
+`therapy_plan` varchar(140),
+`therapy_type` varchar(140),
+`appointment_time` time(6),
+`appointment_datetime` datetime(6),
+`add_video_conferencing` int(1) not null default 0,
+`event` varchar(140),
+`google_meet_link` varchar(140),
+`mode_of_payment` varchar(140),
+`billing_item` varchar(140),
+`invoiced` int(1) not null default 0,
+`paid_amount` decimal(21,9) not null default 0,
+`ref_sales_invoice` varchar(140),
+`referring_practitioner` varchar(140),
+`position_in_queue` int(11) not null default 0,
+`appointment_based_on_check_in` int(1) not null default 0,
+`reminded` int(1) not null default 0,
+`notes` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+`_seen` text,
+index `status`(`status`),
+index `practitioner`(`practitioner`),
+index `department`(`department`),
+index `appointment_date`(`appointment_date`),
+index `patient`(`patient`),
+index `service_request`(`service_request`),
+index `appointment_datetime`(`appointment_datetime`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:10,752 WARNING database DDL Query made to DB:
+create table `tabPatient Assessment` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`therapy_session` varchar(140),
+`patient` varchar(140),
+`assessment_template` varchar(140),
+`company` varchar(140),
+`healthcare_practitioner` varchar(140),
+`assessment_datetime` datetime(6),
+`assessment_description` text,
+`total_score_obtained` int(11) not null default 0,
+`total_score` int(11) not null default 0,
+`scale_min` int(11) not null default 0,
+`scale_max` int(11) not null default 0,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:10,902 WARNING database DDL Query made to DB:
+create table `tabPatient History Standard Document Type` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`document_type` varchar(140),
+`date_fieldname` varchar(140),
+`selected_fields` longtext,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:11,218 WARNING database DDL Query made to DB:
+create table `tabPrescription Duration` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`number` int(11) not null default 0,
+`period` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:11,376 WARNING database DDL Query made to DB:
+create table `tabProcedure Prescription` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`procedure` varchar(140),
+`procedure_name` varchar(140),
+`department` varchar(140),
+`practitioner` varchar(140),
+`service_request` varchar(140),
+`date` date,
+`comments` varchar(140),
+`appointment_booked` int(1) not null default 0,
+`procedure_created` int(1) not null default 0,
+`invoiced` int(1) not null default 0,
+`patient_care_type` varchar(140),
+`intent` varchar(140),
+`priority` varchar(140),
+index `appointment_booked`(`appointment_booked`),
+index `procedure_created`(`procedure_created`),
+index `invoiced`(`invoiced`),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:11,502 WARNING database DDL Query made to DB:
+create table `tabService Request Category` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`category` varchar(140) unique,
+`patient_care_type` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `patient_care_type`(`patient_care_type`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:11,696 WARNING database DDL Query made to DB:
+create table `tabTherapy Plan Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`plan_name` varchar(140) unique,
+`link_existing_item` int(1) not null default 0,
+`linked_item` varchar(140),
+`item_code` varchar(140),
+`item_name` varchar(140),
+`item_group` varchar(140),
+`description` text,
+`total_sessions` int(11) not null default 0,
+`total_amount` decimal(21,9) not null default 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:11,847 WARNING database DDL Query made to DB:
+create table `tabSpecimen` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`specimen_type` varchar(140),
+`received_time` datetime(6),
+`status` varchar(140),
+`barcode` longtext,
+`patient` varchar(140),
+`patient_name` varchar(140),
+`patient_age` varchar(140),
+`patient_gender` varchar(140),
+`note` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:12,039 WARNING database DDL Query made to DB:
+create table `tabPatient Encounter` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`title` varchar(140),
+`appointment` varchar(140),
+`appointment_type` varchar(140),
+`patient` varchar(140),
+`patient_name` varchar(140),
+`patient_sex` varchar(140),
+`patient_age` varchar(140),
+`inpatient_record` varchar(140),
+`inpatient_status` varchar(140),
+`company` varchar(140),
+`status` varchar(140),
+`encounter_date` date,
+`encounter_time` time(6),
+`practitioner` varchar(140),
+`practitioner_name` varchar(140),
+`medical_department` varchar(140),
+`google_meet_link` varchar(140),
+`invoiced` int(1) not null default 0,
+`submit_orders_on_save` int(1) not null default 0,
+`symptoms_in_print` int(1) not null default 0,
+`diagnosis_in_print` int(1) not null default 1,
+`therapy_plan` varchar(140),
+`encounter_comment` text,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+`_seen` text,
+index `appointment`(`appointment`),
+index `patient`(`patient`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:12,194 WARNING database DDL Query made to DB:
+create table `tabDiagnostic Report` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`patient` varchar(140),
+`patient_name` varchar(140),
+`gender` varchar(140),
+`age` varchar(140),
+`practitioner` varchar(140),
+`practitioner_name` varchar(140),
+`company` varchar(140),
+`status` varchar(140),
+`naming_series` varchar(140),
+`ref_doctype` varchar(140),
+`docname` varchar(140),
+`reference_posting_date` date,
+`sample_collection` varchar(140),
+`amended_from` varchar(140),
+`title` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `sample_collection`(`sample_collection`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:12,335 WARNING database DDL Query made to DB:
+create table `tabMedical Department` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`department` varchar(140) unique,
+`patient_care_type` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:12,495 WARNING database DDL Query made to DB:
+create table `tabPatient Assessment Parameter` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`assessment_parameter` varchar(140) unique,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:12,623 WARNING database DDL Query made to DB:
+create table `tabSensitivity` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`sensitivity` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:12,763 WARNING database DDL Query made to DB:
+create table `tabTreatment Plan Template Practitioner` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`practitioner` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:12,890 WARNING database DDL Query made to DB:
+create table `tabCodification Table` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`code_system` varchar(140),
+`system` varchar(140),
+`is_fhir_defined` int(1) not null default 0,
+`oid` varchar(140),
+`code_value` varchar(140),
+`code` varchar(140),
+`display` varchar(140),
+`definition` text,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:13,027 WARNING database DDL Query made to DB:
+create table `tabNormal Test Result` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`lab_test_name` varchar(140),
+`lab_test_event` varchar(140),
+`result_value` varchar(140),
+`lab_test_uom` varchar(140),
+`secondary_uom_result` varchar(140),
+`secondary_uom` varchar(140),
+`conversion_factor` decimal(21,9) not null default 0,
+`allow_blank` int(1) not null default 1,
+`normal_range` longtext,
+`lab_test_comment` varchar(140),
+`bold` int(1) not null default 0,
+`italic` int(1) not null default 0,
+`underline` int(1) not null default 0,
+`template` varchar(140),
+`require_result_value` int(1) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:13,156 WARNING database DDL Query made to DB:
+create table `tabLab Prescription` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`lab_test_code` varchar(140),
+`observation_template` varchar(140),
+`lab_test_name` varchar(140),
+`invoiced` int(1) not null default 0,
+`service_request` varchar(140),
+`lab_test_comment` text,
+`lab_test_created` int(1) not null default 0,
+`patient_care_type` varchar(140),
+`intent` varchar(140),
+`priority` varchar(140),
+index `invoiced`(`invoiced`),
+index `lab_test_created`(`lab_test_created`),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:13,309 WARNING database DDL Query made to DB:
+create table `tabPatient Medical Record` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`patient` varchar(140),
+`status` varchar(140),
+`attach` text,
+`subject` longtext,
+`communication_date` date,
+`reference_doctype` varchar(140),
+`reference_name` varchar(140),
+`reference_owner` varchar(140),
+`user` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+`_seen` text,
+index `patient`(`patient`),
+index `reference_doctype`(`reference_doctype`),
+index `reference_name`(`reference_name`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:13,428 WARNING database DDL Query made to DB:
+create table `tabTreatment Plan Template Item` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`type` varchar(140),
+`template` varchar(140),
+`qty` int(11) not null default 1,
+`instructions` text,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:13,543 WARNING database DDL Query made to DB:
+create table `tabPractitioner Schedule` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`disabled` int(1) not null default 0,
+`allow_video_conferencing` int(1) not null default 0,
+`schedule_name` varchar(140) unique,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:13,680 WARNING database DDL Query made to DB:
+create table `tabLab Test Sample` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`sample_type` varchar(140),
+`sample` varchar(140) unique,
+`container_closure_color` varchar(140),
+`sample_uom` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:13,820 WARNING database DDL Query made to DB:
+create table `tabDescriptive Test Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`particulars` varchar(140),
+`allow_blank` int(1) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:13,958 WARNING database DDL Query made to DB:
+create table `tabAntibiotic` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`antibiotic_name` varchar(140) unique,
+`abbr` varchar(140) unique,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:14,109 WARNING database DDL Query made to DB:
+create table `tabMedication Class` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`medication_class` varchar(140) unique,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:14,274 WARNING database DDL Query made to DB:
+create table `tabTreatment Plan Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`template_name` varchar(140) unique,
+`description` text,
+`medical_department` varchar(140),
+`disabled` int(1) not null default 0,
+`goal` text,
+`order_group` varchar(140),
+`patient_age_from` int(11) not null default 0,
+`patient_age_to` int(11) not null default 0,
+`gender` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:14,436 WARNING database DDL Query made to DB:
+create table `tabOrganism` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`organism` varchar(140) unique,
+`abbr` varchar(140) unique,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:14,578 WARNING database DDL Query made to DB:
+create table `tabPatient Care Type` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`patient_care_type` varchar(140) unique,
+`description` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:14,736 WARNING database DDL Query made to DB:
+create table `tabService Request Reason` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`service_request_reason` varchar(140) unique,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:14,906 WARNING database DDL Query made to DB:
+create table `tabPatient Assessment Sheet` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`parameter` varchar(140),
+`score` varchar(140),
+`time` time(6),
+`comments` text,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:15,067 WARNING database DDL Query made to DB:
+create table `tabVital Signs` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`title` varchar(140),
+`patient` varchar(140),
+`patient_name` varchar(140),
+`inpatient_record` varchar(140),
+`appointment` varchar(140),
+`encounter` varchar(140),
+`company` varchar(140),
+`signs_date` date,
+`signs_time` time(6),
+`temperature` varchar(140),
+`pulse` varchar(140),
+`respiratory_rate` varchar(140),
+`tongue` varchar(140),
+`abdomen` varchar(140),
+`reflexes` varchar(140),
+`bp_systolic` varchar(140),
+`bp_diastolic` varchar(140),
+`bp` varchar(140),
+`vital_signs_note` text,
+`height` decimal(21,9) not null default 0,
+`weight` decimal(21,9) not null default 0,
+`bmi` decimal(21,9) not null default 0,
+`nutrition_note` text,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+`_seen` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:15,223 WARNING database DDL Query made to DB:
+create table `tabNormal Test Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`lab_test_event` varchar(140),
+`allow_blank` int(1) not null default 0,
+`lab_test_uom` varchar(140),
+`secondary_uom` varchar(140),
+`conversion_factor` decimal(21,9) not null default 0,
+`normal_range` longtext,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:15,427 WARNING database DDL Query made to DB:
+create table `tabObservation Reference Range` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`permitted_data_type` varchar(140),
+`reference_type` varchar(140),
+`applies_to` varchar(140),
+`age` varchar(140),
+`gestational_age` decimal(21,9) not null default 0,
+`from_age_type` varchar(140) default 'Years',
+`age_from` varchar(140),
+`to_age_type` varchar(140) default 'Years',
+`age_to` varchar(140),
+`reference_from` varchar(140),
+`datetime` datetime(6),
+`from_duration` decimal(21,9),
+`boolean_value` varchar(140),
+`ratio` varchar(140),
+`options` varchar(140),
+`from_datetime` datetime(6),
+`conditions` longtext,
+`reference_to` varchar(140),
+`to_datetime` datetime(6),
+`to_duration` decimal(21,9),
+`short_interpretation` varchar(140),
+`long_interpretation` text,
+`normal_boolean_value` varchar(140),
+`normal_ratio` varchar(140),
+`normal_from` decimal(21,9) not null default 0,
+`normal_select` varchar(140),
+`normal_condition` longtext,
+`normal_interpretation` varchar(140),
+`normal_to` decimal(21,9) not null default 0,
+`normal_long_interpretation` text,
+`abnormal_boolean_value` varchar(140),
+`abnormal_from` decimal(21,9) not null default 0,
+`abnormal_ratio` varchar(140),
+`abnormal_select` varchar(140),
+`abnormal_condition` longtext,
+`abnormal_interpretation` varchar(140),
+`abnormal_to` decimal(21,9) not null default 0,
+`abnormal_long_interpretation` text,
+`critical_boolean_value` varchar(140),
+`critical_from` decimal(21,9) not null default 0,
+`critical_ratio` varchar(140),
+`critical_select` varchar(140),
+`critical_condition` longtext,
+`critical_interpretation` varchar(140),
+`critical_to` decimal(21,9) not null default 0,
+`critical_long_interpretation` text,
+`reference_text` text,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:15,574 WARNING database DDL Query made to DB:
+create table `tabCode System` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`disabled` int(1) not null default 0,
+`code_system` varchar(140) unique,
+`uri` varchar(140),
+`description` text,
+`status` varchar(140),
+`version` varchar(140),
+`is_fhir_defined` int(1) not null default 1,
+`oid` varchar(140) unique,
+`experimental` int(1) not null default 1,
+`immutable` int(1) not null default 0,
+`complete` int(1) not null default 0,
+`custom` int(1) not null default 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `disabled`(`disabled`),
+index `version`(`version`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:15,736 WARNING database DDL Query made to DB:
+create table `tabLab Test Group Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`template_or_new_line` varchar(140) default 'Add Test',
+`lab_test_template` varchar(140),
+`lab_test_rate` decimal(21,9) not null default 0,
+`lab_test_description` varchar(140),
+`group_event` varchar(140),
+`group_test_uom` varchar(140),
+`secondary_uom` varchar(140),
+`conversion_factor` decimal(21,9) not null default 0,
+`allow_blank` int(1) not null default 0,
+`group_test_normal_range` longtext,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:15,881 WARNING database DDL Query made to DB:
+create table `tabInpatient Medication Entry` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`company` varchar(140),
+`posting_date` date,
+`status` varchar(140),
+`item_code` varchar(140),
+`assigned_to_practitioner` varchar(140),
+`patient` varchar(140),
+`practitioner` varchar(140),
+`service_unit` varchar(140),
+`from_date` date,
+`to_date` date,
+`from_time` time(6),
+`to_time` time(6),
+`update_stock` int(1) not null default 1,
+`warehouse` varchar(140),
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:16,049 WARNING database DDL Query made to DB:
+create table `tabMedication` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`generic_name` varchar(140) unique,
+`medication_class` varchar(140),
+`abbr` varchar(140),
+`national_drug_code` varchar(140),
+`is_combination` int(1) not null default 0,
+`disabled` int(1) not null default 0,
+`strength` decimal(21,9) not null default 0,
+`strength_uom` varchar(140),
+`price_list` varchar(140),
+`default_prescription_dosage` varchar(140),
+`default_prescription_duration` varchar(140),
+`dosage_form` varchar(140),
+`default_interval` int(11) not null default 0,
+`default_interval_uom` varchar(140),
+`reference_url` longtext,
+`change_in_item` int(1) not null default 0,
+`staff_role` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:16,253 WARNING database DDL Query made to DB:
+create table `tabTherapy Session` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`appointment` varchar(140),
+`therapy_plan` varchar(140),
+`patient` varchar(140),
+`patient_name` varchar(140),
+`patient_age` varchar(140),
+`gender` varchar(140),
+`company` varchar(140),
+`therapy_type` varchar(140),
+`practitioner` varchar(140),
+`department` varchar(140),
+`duration` int(11) not null default 0,
+`rate` decimal(21,9) not null default 0,
+`location` varchar(140),
+`service_unit` varchar(140),
+`start_date` date,
+`start_time` time(6),
+`total_counts_targeted` int(11) not null default 0,
+`total_counts_completed` int(11) not null default 0,
+`service_request` varchar(140),
+`invoiced` int(1) not null default 0,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:16,388 WARNING database DDL Query made to DB:
+create table `tabPatient Assessment Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`assessment_parameter` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:16,585 WARNING database DDL Query made to DB:
+create table `tabMedication Request` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`title` varchar(140),
+`naming_series` varchar(140),
+`medication` varchar(140),
+`medication_item` varchar(140),
+`order_date` date,
+`expected_date` date,
+`order_time` time(6),
+`company` varchar(140),
+`status` varchar(140) default 'draft-Medication Request Status',
+`patient` varchar(140),
+`patient_name` varchar(140),
+`patient_gender` varchar(140),
+`patient_birth_date` date,
+`patient_age_data` varchar(140),
+`patient_age` int(11) not null default 0,
+`patient_blood_group` varchar(140),
+`patient_email` varchar(140),
+`patient_mobile` varchar(140),
+`inpatient_record` varchar(140),
+`inpatient_status` varchar(140),
+`practitioner` varchar(140),
+`practitioner_name` varchar(140),
+`practitioner_email` varchar(140),
+`medical_department` varchar(140),
+`referred_to_practitioner` varchar(140),
+`reason_reference_doctype` varchar(140),
+`reason_reference` varchar(140),
+`order_group` varchar(140),
+`sequence` int(11) not null default 0,
+`staff_role` varchar(140),
+`item_code` varchar(140),
+`intent` varchar(140),
+`priority` varchar(140),
+`quantity` int(11) not null default 1,
+`dosage_form` varchar(140),
+`dosage` varchar(140),
+`number_of_repeats_allowed` decimal(21,9) not null default 0,
+`order_description` text,
+`period` varchar(140),
+`occurrence_time` time(6),
+`total_dispensable_quantity` decimal(21,9) not null default 0,
+`billing_status` varchar(140) default 'Pending',
+`qty_invoiced` decimal(21,9) not null default 0,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `medication`(`medication`),
+index `status`(`status`),
+index `patient`(`patient`),
+index `patient_email`(`patient_email`),
+index `patient_mobile`(`patient_mobile`),
+index `inpatient_record`(`inpatient_record`),
+index `practitioner`(`practitioner`),
+index `staff_role`(`staff_role`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:16,844 WARNING database DDL Query made to DB:
+create table `tabObservation` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`observation_template` varchar(140),
+`observation_category` varchar(140),
+`company` varchar(140),
+`posting_date` date,
+`status` varchar(140) default 'Registered',
+`medical_department` varchar(140),
+`amended_from` varchar(140),
+`patient` varchar(140),
+`patient_name` varchar(140),
+`age` varchar(140),
+`gender` varchar(140),
+`healthcare_practitioner` varchar(140),
+`practitioner_name` varchar(140),
+`has_component` int(1) not null default 0,
+`preferred_display_name` varchar(140),
+`sample_collection_required` int(1) not null default 0,
+`permitted_unit` varchar(140),
+`sample` varchar(140),
+`sample_type` varchar(140),
+`permitted_data_type` varchar(140),
+`method` varchar(140),
+`specimen` varchar(140),
+`sample_collection_time` datetime(6),
+`sample_status` varchar(140),
+`result_template` varchar(140),
+`result_attach` text,
+`result_boolean` varchar(140),
+`result_data` varchar(140),
+`result_text` longtext,
+`result_float` decimal(21,9) not null default 0,
+`result_select` varchar(140),
+`result_datetime` datetime(6),
+`result_time` datetime(6),
+`result_period_from` datetime(6),
+`result_period_to` datetime(6),
+`options` text,
+`time_of_result` datetime(6),
+`time_of_approval` datetime(6),
+`interpretation_template` varchar(140),
+`result_interpretation` longtext,
+`observation_method` varchar(140),
+`reference` text,
+`note` longtext,
+`description` longtext,
+`reference_doctype` varchar(140),
+`reference_docname` varchar(140),
+`sales_invoice` varchar(140),
+`sales_invoice_status` varchar(140),
+`sales_invoice_item` varchar(140),
+`service_request` varchar(140),
+`disapproval_reason` text,
+`parent_observation` varchar(140),
+`observation_idx` int(11) not null default 0,
+`days` int(11) not null default 0,
+`invoiced` int(1) not null default 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:17,001 WARNING database DDL Query made to DB:
+create table `tabTherapy Plan` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`patient` varchar(140),
+`patient_name` varchar(140),
+`invoiced` int(1) not null default 0,
+`company` varchar(140),
+`status` varchar(140),
+`start_date` date,
+`therapy_plan_template` varchar(140),
+`title` varchar(140) default '{patient_name}',
+`total_sessions` int(11) not null default 0,
+`total_sessions_completed` int(11) not null default 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:17,176 WARNING database DDL Query made to DB:
+create sequence if not exists observation_sample_collection_id_seq nocache nocycle
+2025-07-30 13:00:17,184 WARNING database DDL Query made to DB:
+create table `tabObservation Sample Collection` (
+			name bigint primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`observation_template` varchar(140),
+`has_component` int(1) not null default 0,
+`sample` varchar(140) default 'Urine',
+`sample_type` varchar(140),
+`uom` varchar(140),
+`status` varchar(140),
+`container_closure_color` varchar(140),
+`sample_qty` decimal(21,9) not null default 0,
+`medical_department` varchar(140),
+`collection_date_time` datetime(6),
+`collection_point` varchar(140),
+`collected_user` varchar(140),
+`collected_by` varchar(140),
+`reference_doctype` varchar(140),
+`reference_docname` varchar(140),
+`reference_child` varchar(140),
+`service_request` varchar(140),
+`specimen` varchar(140),
+`component_observation_parent` varchar(140),
+`component_observations` text,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:17,343 WARNING database DDL Query made to DB:
+create table `tabClinical Procedure Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`template` varchar(140) unique,
+`medical_department` varchar(140),
+`description` text,
+`disabled` int(1) not null default 0,
+`pre_op_nursing_checklist_template` varchar(140),
+`post_op_nursing_checklist_template` varchar(140),
+`link_existing_item` int(1) not null default 0,
+`item` varchar(140),
+`item_code` varchar(140),
+`item_group` varchar(140),
+`is_billable` int(1) not null default 0,
+`rate` decimal(21,9) not null default 0,
+`consume_stock` int(1) not null default 0,
+`sample_uom` varchar(140),
+`sample_qty` decimal(21,9) not null default 0,
+`sample` varchar(140),
+`sample_details` text,
+`change_in_item` int(1) not null default 0,
+`patient_care_type` varchar(140),
+`staff_role` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+`_seen` text,
+index `consume_stock`(`consume_stock`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:17,552 WARNING database DDL Query made to DB:
+create table `tabAppointment Type` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`appointment_type` varchar(140) unique,
+`default_duration` int(11) not null default 0,
+`allow_booking_for` varchar(140) default 'Practitioner',
+`color` varchar(140),
+`price_list` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:17,687 WARNING database DDL Query made to DB:
+create table `tabPatient Encounter Symptom` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`complaint` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:17,963 WARNING database DDL Query made to DB:
+create table `tabABDM Settings` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`gateway_name` varchar(140),
+`default` int(1) not null default 0,
+`company` varchar(140),
+`auth_base_url` varchar(140),
+`client_id` varchar(140),
+`client_secret` varchar(140),
+`health_id_base_url` varchar(140),
+`consent_base_url` varchar(140),
+`patient_aadhaar_consent` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:18,102 WARNING database DDL Query made to DB:
+create table `tabDosage Form` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`dosage_form` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:18,260 WARNING database DDL Query made to DB:
+create table `tabHealthcare Activity` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`activity` varchar(140) unique,
+`description` text,
+`activity_duration` decimal(21,9),
+`role` varchar(140),
+`task_doctype` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:18,499 WARNING database DDL Query made to DB:
+create table `tabLab Test` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`template` varchar(140),
+`lab_test_name` varchar(140),
+`lab_test_group` varchar(140),
+`department` varchar(140),
+`company` varchar(140),
+`status` varchar(140),
+`date` date,
+`time` time(6),
+`submitted_date` datetime(6),
+`result_date` date,
+`approved_date` datetime(6),
+`expected_result_date` date,
+`expected_result_time` time(6),
+`printed_on` datetime(6),
+`patient` varchar(140),
+`patient_name` varchar(140),
+`patient_age` varchar(140),
+`patient_sex` varchar(140),
+`inpatient_record` varchar(140),
+`report_preference` varchar(140),
+`email` varchar(140),
+`mobile` varchar(140),
+`service_unit` varchar(140),
+`practitioner` varchar(140),
+`practitioner_name` varchar(140),
+`requesting_department` varchar(140),
+`employee` varchar(140),
+`employee_name` varchar(140),
+`employee_designation` varchar(140),
+`user` varchar(140),
+`sample` varchar(140),
+`descriptive_result` longtext,
+`lab_test_comment` text,
+`custom_result` longtext,
+`worksheet_instructions` longtext,
+`legend_print_position` varchar(140),
+`result_legend` longtext,
+`service_request` varchar(140),
+`invoiced` int(1) not null default 0,
+`email_sent` int(1) not null default 0,
+`sms_sent` int(1) not null default 0,
+`printed` int(1) not null default 0,
+`normal_toggle` int(1) not null default 0,
+`imaging_toggle` int(1) not null default 0,
+`descriptive_toggle` int(1) not null default 0,
+`sensitivity_toggle` int(1) not null default 0,
+`amended_from` varchar(140),
+`prescription` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+`_seen` text,
+index `lab_test_name`(`lab_test_name`),
+index `department`(`department`),
+index `status`(`status`),
+index `result_date`(`result_date`),
+index `patient`(`patient`),
+index `mobile`(`mobile`),
+index `practitioner`(`practitioner`),
+index `service_request`(`service_request`),
+index `invoiced`(`invoiced`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:18,743 WARNING database DDL Query made to DB:
+create table `tabLab Test Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`lab_test_name` varchar(140) unique,
+`department` varchar(140),
+`disabled` int(1) not null default 0,
+`nursing_checklist_template` varchar(140),
+`link_existing_item` int(1) not null default 0,
+`item` varchar(140),
+`lab_test_code` varchar(140),
+`lab_test_group` varchar(140),
+`is_billable` int(1) not null default 1,
+`lab_test_rate` decimal(21,9) not null default 0,
+`lab_test_description` longtext,
+`lab_test_template_type` varchar(140),
+`descriptive_result` longtext,
+`lab_test_uom` varchar(140),
+`secondary_uom` varchar(140),
+`conversion_factor` decimal(21,9) not null default 0,
+`lab_test_normal_range` longtext,
+`sensitivity` int(1) not null default 0,
+`sample` varchar(140),
+`sample_uom` varchar(140),
+`sample_qty` decimal(21,9) not null default 0,
+`sample_details` text,
+`worksheet_instructions` longtext,
+`legend_print_position` varchar(140),
+`result_legend` longtext,
+`patient_care_type` varchar(140),
+`staff_role` varchar(140),
+`change_in_item` int(1) not null default 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `item`(`item`),
+index `lab_test_group`(`lab_test_group`),
+index `is_billable`(`is_billable`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:18,886 WARNING database DDL Query made to DB:
+create table `tabLab Test UOM` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`lab_test_uom` varchar(140) unique,
+`uom_description` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:19,009 WARNING database DDL Query made to DB:
+create table `tabSample Type` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`sample_type` varchar(140) unique,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:19,144 WARNING database DDL Query made to DB:
+create table `tabOrganism Test Result` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`organism` varchar(140),
+`colony_population` text,
+`colony_uom` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:19,269 WARNING database DDL Query made to DB:
+create table `tabFee Validity Reference` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`appointment` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:19,426 WARNING database DDL Query made to DB:
+create table `tabSample Collection` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`patient` varchar(140),
+`patient_name` varchar(140),
+`patient_age` varchar(140),
+`patient_sex` varchar(140),
+`referring_practitioner` varchar(140),
+`company` varchar(140),
+`status` varchar(140),
+`inpatient_record` varchar(140),
+`collection_point` varchar(140),
+`invoiced` int(1) not null default 0,
+`sample` varchar(140),
+`sample_uom` varchar(140),
+`sample_qty` decimal(21,9) not null default 0,
+`collected_by` varchar(140),
+`collected_time` datetime(6),
+`num_print` int(11) not null default 1,
+`sample_details` longtext,
+`service_request` varchar(140),
+`reference_doc` varchar(140),
+`reference_name` varchar(140),
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+`_seen` text,
+index `patient`(`patient`),
+index `invoiced`(`invoiced`),
+index `sample`(`sample`),
+index `amended_from`(`amended_from`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:19,567 WARNING database DDL Query made to DB:
+create table `tabClinical Note Type` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`clinical_note_type` varchar(140) unique,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:19,710 WARNING database DDL Query made to DB:
+create table `tabPatient Assessment Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`assessment_name` varchar(140) unique,
+`scale_min` int(11) not null default 0,
+`scale_max` int(11) not null default 0,
+`assessment_description` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:19,863 WARNING database DDL Query made to DB:
+create table `tabFee Validity` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`practitioner` varchar(140),
+`patient` varchar(140),
+`medical_department` varchar(140),
+`status` varchar(140),
+`patient_appointment` varchar(140),
+`sales_invoice_ref` varchar(140),
+`max_visits` int(11) not null default 0,
+`visited` int(11) not null default 0,
+`start_date` date,
+`valid_till` date,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `practitioner`(`practitioner`),
+index `patient`(`patient`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:19,997 WARNING database DDL Query made to DB:
+create table `tabMedication Linked Item` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`item_code` varchar(140),
+`item` varchar(140),
+`item_group` varchar(140),
+`stock_uom` varchar(140),
+`brand` varchar(140),
+`manufacturer` varchar(140),
+`description` text,
+`is_billable` int(1) not null default 1,
+`rate` decimal(21,9) not null default 0,
+`change_in_item` int(1) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:20,208 WARNING database DDL Query made to DB:
+create table `tabService Request` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`title` varchar(140),
+`naming_series` varchar(140),
+`order_date` date,
+`order_time` time(6),
+`status` varchar(140),
+`company` varchar(140),
+`expected_date` date,
+`patient` varchar(140),
+`patient_name` varchar(140),
+`patient_gender` varchar(140),
+`patient_birth_date` date,
+`patient_age_data` varchar(140),
+`patient_age` int(11) not null default 0,
+`patient_blood_group` varchar(140),
+`patient_email` varchar(140),
+`patient_mobile` varchar(140),
+`inpatient_record` varchar(140),
+`inpatient_status` varchar(140),
+`practitioner` varchar(140),
+`practitioner_email` varchar(140),
+`medical_department` varchar(140),
+`referred_to_practitioner` varchar(140),
+`source_doc` varchar(140),
+`order_group` varchar(140),
+`sequence` int(11) not null default 0,
+`staff_role` varchar(140),
+`item_code` varchar(140),
+`patient_care_type` varchar(140),
+`intent` varchar(140),
+`priority` varchar(140),
+`quantity` int(11) not null default 1,
+`dosage_form` varchar(140),
+`as_needed` int(1) not null default 0,
+`dosage` varchar(140),
+`period` varchar(140),
+`occurrence_date` date,
+`occurrence_time` time(6),
+`healthcare_service_unit_type` varchar(140),
+`order_description` text,
+`patient_instructions` text,
+`order_reference_doctype` varchar(140),
+`order_reference_name` varchar(140),
+`source` varchar(140),
+`referring_practitioner` varchar(140),
+`reason_reference_doctype` varchar(140),
+`reason_reference` varchar(140),
+`order_group_doctype` varchar(140) default 'Patient Encounter',
+`amended_from` varchar(140),
+`template_dt` varchar(140),
+`template_dn` varchar(140),
+`sample_collection_required` int(1) not null default 0,
+`qty_invoiced` decimal(21,9) not null default 0,
+`billing_status` varchar(140) default 'Pending',
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `template_dt`(`template_dt`),
+index `template_dn`(`template_dn`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:20,370 WARNING database DDL Query made to DB:
+create table `tabSensitivity Test Result` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`antibiotic` varchar(140),
+`antibiotic_sensitivity` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:20,510 WARNING database DDL Query made to DB:
+create table `tabAppointment Type Service Item` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`dt` varchar(140),
+`dn` varchar(140),
+`op_consulting_charge_item` varchar(140),
+`op_consulting_charge` decimal(21,9) not null default 0,
+`inpatient_visit_charge_item` varchar(140),
+`inpatient_visit_charge` decimal(21,9) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:20,625 WARNING database DDL Query made to DB:
+create table `tabMedication Ingredient` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`medication` varchar(140),
+`strength` decimal(21,9) not null default 0,
+`strength_uom` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:20,766 WARNING database DDL Query made to DB:
+create table `tabInpatient Medication Entry Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`patient` varchar(140),
+`patient_name` varchar(140),
+`inpatient_record` varchar(140),
+`service_unit` varchar(140),
+`datetime` datetime(6),
+`drug_code` varchar(140),
+`drug_name` varchar(140),
+`dosage` decimal(21,9) not null default 0,
+`available_qty` decimal(21,9) not null default 0,
+`dosage_form` varchar(140),
+`instructions` text,
+`against_imo` varchar(140),
+`against_imoe` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:20,884 WARNING database DDL Query made to DB:
+create table `tabABDM Request` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`request_name` varchar(140),
+`request_date` datetime(6),
+`status` varchar(140),
+`url` varchar(140),
+`request` longtext,
+`traceback` longtext,
+`response` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+`_seen` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:21,015 WARNING database DDL Query made to DB:
+create table `tabComplaint` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`complaints` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:21,218 WARNING database DDL Query made to DB:
+create table `tabObservation Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`observation` varchar(140) unique,
+`observation_category` varchar(140),
+`preferred_display_name` varchar(140),
+`abbr` varchar(140),
+`has_component` int(1) not null default 0,
+`medical_department` varchar(140),
+`description` longtext,
+`method` varchar(140),
+`method_value` varchar(140),
+`service_unit` varchar(140),
+`result_template` varchar(140),
+`interpretation_template` varchar(140),
+`permitted_data_type` varchar(140),
+`permitted_unit` varchar(140),
+`options` text,
+`template` varchar(140),
+`sample_collection_required` int(1) not null default 0,
+`sample` varchar(140),
+`sample_qty` decimal(21,9) not null default 0,
+`uom` varchar(140),
+`sample_type` varchar(140),
+`container_closure_color` varchar(140),
+`sample_details` text,
+`is_billable` int(1) not null default 0,
+`link_existing_item` int(1) not null default 0,
+`item` varchar(140),
+`item_code` varchar(140),
+`item_group` varchar(140),
+`rate` decimal(21,9) not null default 0,
+`change_in_item` int(1) not null default 0,
+`patient_care_type` varchar(140),
+`staff_role` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `is_billable`(`is_billable`),
+index `item`(`item`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:21,346 WARNING database DDL Query made to DB:
+create table `tabPatient History Custom Document Type` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`document_type` varchar(140),
+`date_fieldname` varchar(140),
+`selected_fields` longtext,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:21,470 WARNING database DDL Query made to DB:
+create table `tabHealthcare Schedule Time Slot` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`day` varchar(140),
+`from_time` time(6),
+`to_time` time(6),
+`duration` decimal(21,9) not null default 0,
+`maximum_appointments` int(11) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:21,653 WARNING database DDL Query made to DB:
+create table `tabPatient` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`first_name` varchar(140),
+`middle_name` varchar(140),
+`last_name` varchar(140),
+`patient_name` varchar(140),
+`sex` varchar(140),
+`blood_group` varchar(140),
+`dob` date,
+`image` text,
+`status` varchar(140),
+`uid` varchar(140) unique,
+`inpatient_record` varchar(140),
+`inpatient_status` varchar(140),
+`report_preference` varchar(140),
+`mobile` varchar(140),
+`phone` varchar(140),
+`email` varchar(140),
+`invite_user` int(1) not null default 1,
+`user_id` varchar(140),
+`customer` varchar(140),
+`customer_group` varchar(140),
+`territory` varchar(140),
+`default_currency` varchar(140),
+`default_price_list` varchar(140),
+`language` varchar(140),
+`patient_details` text,
+`occupation` varchar(140),
+`marital_status` varchar(140),
+`allergies` text,
+`medication` text,
+`medical_history` text,
+`surgical_history` text,
+`tobacco_past_use` varchar(140),
+`tobacco_current_use` varchar(140),
+`alcohol_past_use` varchar(140),
+`alcohol_current_use` varchar(140),
+`surrounding_factors` text,
+`other_risk_factors` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `patient_name`(`patient_name`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:21,801 WARNING database DDL Query made to DB:
+create table `tabBody Part` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`body_part` varchar(140) unique,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:21,954 WARNING database DDL Query made to DB:
+create table `tabClinical Procedure` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`title` varchar(140),
+`appointment` varchar(140),
+`procedure_template` varchar(140),
+`company` varchar(140),
+`patient` varchar(140),
+`patient_name` varchar(140),
+`patient_sex` varchar(140),
+`patient_age` varchar(140),
+`inpatient_record` varchar(140),
+`notes` text,
+`status` varchar(140),
+`practitioner` varchar(140),
+`practitioner_name` varchar(140),
+`medical_department` varchar(140),
+`service_unit` varchar(140),
+`start_date` date,
+`start_time` time(6),
+`sample` varchar(140),
+`consume_stock` int(1) not null default 0,
+`warehouse` varchar(140),
+`invoice_separately_as_consumables` int(1) not null default 0,
+`consumption_invoiced` int(1) not null default 0,
+`consumable_total_amount` decimal(21,9) not null default 0,
+`consumption_details` text,
+`service_request` varchar(140),
+`invoiced` int(1) not null default 0,
+`prescription` varchar(140),
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:22,151 WARNING database DDL Query made to DB:
+create table `tabNursing Task` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`title` varchar(140),
+`date` date,
+`user` varchar(140),
+`company` varchar(140),
+`service_unit` varchar(140),
+`medical_department` varchar(140),
+`status` varchar(140) default 'Draft',
+`activity` varchar(140),
+`mandatory` int(1) not null default 0,
+`description` text,
+`patient` varchar(140),
+`patient_name` varchar(140),
+`age` varchar(140),
+`gender` varchar(140),
+`inpatient_record` varchar(140),
+`inpatient_status` varchar(140),
+`requested_start_time` datetime(6),
+`requested_end_time` datetime(6),
+`duration` decimal(21,9),
+`task_start_time` datetime(6),
+`task_end_time` datetime(6),
+`task_duration` decimal(21,9),
+`reference_doctype` varchar(140),
+`amended_from` varchar(140),
+`reference_name` varchar(140),
+`task_doctype` varchar(140),
+`task_document_name` varchar(140),
+`notes` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:22,309 WARNING database DDL Query made to DB:
+create table `tabPractitioner Service Unit Schedule` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`schedule` varchar(140),
+`service_unit` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:22,433 WARNING database DDL Query made to DB:
+create table `tabTherapy Plan Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`therapy_type` varchar(140),
+`no_of_sessions` int(11) not null default 0,
+`sessions_completed` int(11) not null default 0,
+`service_request` varchar(140),
+`patient_care_type` varchar(140),
+`intent` varchar(140),
+`priority` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:22,577 WARNING database DDL Query made to DB:
+create table `tabClinical Note` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`patient` varchar(140),
+`gender` varchar(140),
+`blood_group` varchar(140),
+`clinical_note_type` varchar(140),
+`terms_and_conditions` varchar(140),
+`posting_date` datetime(6),
+`practitioner` varchar(140),
+`user` varchar(140),
+`note` longtext,
+`reference_doc` varchar(140),
+`reference_name` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:22,709 WARNING database DDL Query made to DB:
+create table `tabTherapy Plan Template Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`therapy_type` varchar(140),
+`no_of_sessions` int(11) not null default 0,
+`rate` decimal(21,9) not null default 0,
+`amount` decimal(21,9) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-07-30 13:00:22,821 WARNING database DDL Query made to DB:
+create table `tabBody Part Link` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`body_part` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci

@@ -194,7 +194,7 @@ services:
       - ${SITES_MOUNT:-sites}:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
 
-  frontend-sandbox:
+  frontend-uat:
     image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
     platform: linux/arm64
     depends_on:
@@ -206,7 +206,7 @@ services:
       - nginx-entrypoint.sh
     environment:
       BACKEND: backend:8000
-      FRAPPE_SITE_NAME_HEADER: sandbox.tagrit.com
+      FRAPPE_SITE_NAME_HEADER: uat.tagrit.com
       SOCKETIO: websocket:9000
       UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
       UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
@@ -219,90 +219,6 @@ services:
       - logs:/home/frappe/frappe-bench/logs
     ports:
       - "8082:8080"
-    networks:
-      - frappe_network
-
-  frontend-clientdemo:
-    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
-    platform: linux/arm64
-    depends_on:
-      - websocket
-    deploy:
-      restart_policy:
-        condition: on-failure
-    command:
-      - nginx-entrypoint.sh
-    environment:
-      BACKEND: backend:8000
-      FRAPPE_SITE_NAME_HEADER: clientdemo.tagrit.com
-      SOCKETIO: websocket:9000
-      UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
-      UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
-      UPSTREAM_REAL_IP_RECURSIVE: "off"
-      PROXY_READ_TIMEOUT: 120
-      CLIENT_MAX_BODY_SIZE: 50m
-    volumes:
-      - ${APPS_MOUNT:-apps}:/home/frappe/frappe-bench/apps
-      - ${SITES_MOUNT:-sites}:/home/frappe/frappe-bench/sites
-      - logs:/home/frappe/frappe-bench/logs
-    ports:
-      - "8083:8080"
-    networks:
-      - frappe_network
-
-  frontend-hub:
-    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
-    platform: linux/arm64
-    depends_on:
-      - websocket
-    deploy:
-      restart_policy:
-        condition: on-failure
-    command:
-      - nginx-entrypoint.sh
-    environment:
-      BACKEND: backend:8000
-      FRAPPE_SITE_NAME_HEADER: hub.tagrit.com
-      SOCKETIO: websocket:9000
-      UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
-      UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
-      UPSTREAM_REAL_IP_RECURSIVE: "off"
-      PROXY_READ_TIMEOUT: 120
-      CLIENT_MAX_BODY_SIZE: 50m
-    volumes:
-      - ${APPS_MOUNT:-apps}:/home/frappe/frappe-bench/apps
-      - ${SITES_MOUNT:-sites}:/home/frappe/frappe-bench/sites
-      - logs:/home/frappe/frappe-bench/logs
-    ports:
-      - "8084:8080"
-    networks:
-      - frappe_network
-
-  frontend-cb:
-    image: kevinamayi20/tagrit-erp:${TAG:-v2.0.0}
-    platform: linux/arm64
-    depends_on:
-      - websocket
-    deploy:
-      restart_policy:
-        condition: on-failure
-    command:
-      - nginx-entrypoint.sh
-    environment:
-      BACKEND: backend:8000
-      FRAPPE_SITE_NAME_HEADER: cb.tagrit.com
-      SOCKETIO: websocket:9000
-      UPSTREAM_REAL_IP_ADDRESS: 127.0.0.1
-      UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
-      UPSTREAM_REAL_IP_RECURSIVE: "off"
-      PROXY_READ_TIMEOUT: 120
-      CLIENT_MAX_BODY_SIZE: 50m
-    volumes:
-      - ${APPS_MOUNT:-apps}:/home/frappe/frappe-bench/apps
-      - ${SITES_MOUNT:-sites}:/home/frappe/frappe-bench/sites
-      - logs:/home/frappe/frappe-bench/logs
-    ports:
-      - "8085:8080"
     networks:
       - frappe_network
 
