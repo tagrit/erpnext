@@ -1,0 +1,13 @@
+[
+  {"name":"erpnext","url":"https://github.com/frappe/erpnext","branch":"version-15"},
+  {"name":"hrms","url":"https://github.com/frappe/hrms.git","branch":"version-15"},
+  {"name":"wiki","url":"https://github.com/frappe/wiki.git","branch":"version-14"},
+  {"name":"propms","url":"https://github.com/Aakvatech-Limited/PropMS.git","branch":"version-15"},
+  {"name":"healthcare","url":"https://github.com/earthians/marley.git","branch":"version-15"},
+  {"name":"navari_csf_ke","url":"https://github.com/navariltd/navari_csf_ke.git","branch":"version-15"},
+  {"name":"payments","url":"https://github.com/frappe/payments.git","branch":"version-15"},
+  {"name":"insights","url":"https://github.com/frappe/insights.git","branch":"version-3"},
+  {"name":"education","url":"https://github.com/frappe/education.git","branch":"version-15"},
+  {"name":"lending","url":"https://github.com/frappe/lending.git","branch":"version-15"},
+  {"name":"kenya-compliance-via-slade","url":"https://github.com/navariltd/kenya-compliance-via-slade.git","branch":"version-15"}
+]
