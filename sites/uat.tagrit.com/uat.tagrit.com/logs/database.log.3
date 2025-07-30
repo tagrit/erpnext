@@ -1,40 +1,40 @@
-2025-07-30 13:11:03,262 WARNING database DDL Query made to DB:
-ALTER TABLE `tabMaterial Request Item` ADD COLUMN `material_request` varchar(140)
-2025-07-30 13:11:03,271 WARNING database DDL Query made to DB:
-ALTER TABLE `tabMaterial Request Item` MODIFY `rate` decimal(21,9) not null default 0, MODIFY `projected_qty` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0, MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `price_list_rate` decimal(21,9) not null default 0, MODIFY `received_qty` decimal(21,9) not null default 0, MODIFY `min_order_qty` decimal(21,9) not null default 0, MODIFY `ordered_qty` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0
-2025-07-30 13:11:03,335 WARNING database DDL Query made to DB:
-ALTER TABLE `tabIssue` ADD COLUMN `property_name` varchar(140), ADD COLUMN `person_in_charge` varchar(140), ADD COLUMN `sub_contractor_contact` varchar(140), ADD COLUMN `person_in_charge_name` varchar(140), ADD COLUMN `sub_contractor_name` varchar(140), ADD COLUMN `defect_found` longtext, ADD COLUMN `customer_feedback` longtext
-2025-07-30 13:11:03,345 WARNING database DDL Query made to DB:
-ALTER TABLE `tabIssue` MODIFY `first_response_time` decimal(21,9), MODIFY `total_hold_time` decimal(21,9), MODIFY `user_resolution_time` decimal(21,9), MODIFY `avg_response_time` decimal(21,9), MODIFY `resolution_time` decimal(21,9)
-2025-07-30 13:11:03,429 WARNING database DDL Query made to DB:
+2025-07-30 13:21:45,760 WARNING database DDL Query made to DB:
 ALTER TABLE `tabCompany` ADD COLUMN `security_account_code` varchar(140), ADD COLUMN `default_tax_account_head` varchar(140), ADD COLUMN `default_tax_template` varchar(140), ADD COLUMN `default_maintenance_tax_template` varchar(140)
-2025-07-30 13:11:03,438 WARNING database DDL Query made to DB:
+2025-07-30 13:21:45,770 WARNING database DDL Query made to DB:
 ALTER TABLE `tabCompany` MODIFY `total_monthly_sales` decimal(21,9) not null default 0, MODIFY `monthly_sales_target` decimal(21,9) not null default 0, MODIFY `credit_limit` decimal(21,9) not null default 0
-2025-07-30 13:11:03,524 WARNING database DDL Query made to DB:
+2025-07-30 13:21:45,832 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMaterial Request Item` ADD COLUMN `material_request` varchar(140)
+2025-07-30 13:21:45,841 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMaterial Request Item` MODIFY `min_order_qty` decimal(21,9) not null default 0, MODIFY `price_list_rate` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0, MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `ordered_qty` decimal(21,9) not null default 0, MODIFY `received_qty` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `projected_qty` decimal(21,9) not null default 0
+2025-07-30 13:21:45,915 WARNING database DDL Query made to DB:
 ALTER TABLE `tabItem` ADD COLUMN `reading_required` int(1) not null default 0
-2025-07-30 13:11:03,533 WARNING database DDL Query made to DB:
-ALTER TABLE `tabItem` MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `last_purchase_rate` decimal(21,9) not null default 0, MODIFY `total_projected_qty` decimal(21,9) not null default 0, MODIFY `opening_stock` decimal(21,9) not null default 0, MODIFY `safety_stock` decimal(21,9) not null default 0, MODIFY `over_billing_allowance` decimal(21,9) not null default 0, MODIFY `over_delivery_receipt_allowance` decimal(21,9) not null default 0, MODIFY `max_discount` decimal(21,9) not null default 0, MODIFY `standard_rate` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0
-2025-07-30 13:11:03,630 WARNING database DDL Query made to DB:
-ALTER TABLE `tabSales Invoice` ADD COLUMN `lease` varchar(140), ADD COLUMN `lease_item` varchar(140), ADD COLUMN `job_card` varchar(140)
-2025-07-30 13:11:03,638 WARNING database DDL Query made to DB:
-ALTER TABLE `tabSales Invoice` MODIFY `total_commission` decimal(21,9) not null default 0, MODIFY `outstanding_amount` decimal(21,9) not null default 0, MODIFY `total_billing_hours` decimal(21,9) not null default 0, MODIFY `paid_amount` decimal(21,9) not null default 0, MODIFY `total_net_weight` decimal(21,9) not null default 0, MODIFY `base_rounding_adjustment` decimal(21,9) not null default 0, MODIFY `rounding_adjustment` decimal(21,9) not null default 0, MODIFY `conversion_rate` decimal(21,9) not null default 0, MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `amount_eligible_for_commission` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `change_amount` decimal(21,9) not null default 0, MODIFY `base_write_off_amount` decimal(21,9) not null default 0, MODIFY `additional_discount_percentage` decimal(21,9) not null default 0, MODIFY `commission_rate` decimal(21,9) not null default 0, MODIFY `total_advance` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `base_net_total` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `base_paid_amount` decimal(21,9) not null default 0, MODIFY `rounded_total` decimal(21,9) not null default 0, MODIFY `plc_conversion_rate` decimal(21,9) not null default 0, MODIFY `base_change_amount` decimal(21,9) not null default 0, MODIFY `loyalty_amount` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `write_off_amount` decimal(21,9) not null default 0, MODIFY `base_grand_total` decimal(21,9) not null default 0, MODIFY `base_discount_amount` decimal(21,9) not null default 0
-2025-07-30 13:11:03,695 WARNING database DDL Query made to DB:
-ALTER TABLE `tabMaterial Request` ADD COLUMN `sales_invoice` varchar(140)
-2025-07-30 13:11:03,703 WARNING database DDL Query made to DB:
-ALTER TABLE `tabMaterial Request` MODIFY `per_ordered` decimal(21,9) not null default 0, MODIFY `per_received` decimal(21,9) not null default 0
-2025-07-30 13:11:03,757 WARNING database DDL Query made to DB:
-ALTER TABLE `tabIssue Materials Detail` ADD COLUMN `mateiral_request` varchar(140)
-2025-07-30 13:11:03,764 WARNING database DDL Query made to DB:
-ALTER TABLE `tabIssue Materials Detail` MODIFY `rate` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0
-2025-07-30 13:11:03,844 WARNING database DDL Query made to DB:
+2025-07-30 13:21:45,924 WARNING database DDL Query made to DB:
+ALTER TABLE `tabItem` MODIFY `over_billing_allowance` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `total_projected_qty` decimal(21,9) not null default 0, MODIFY `standard_rate` decimal(21,9) not null default 0, MODIFY `last_purchase_rate` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `safety_stock` decimal(21,9) not null default 0, MODIFY `max_discount` decimal(21,9) not null default 0, MODIFY `over_delivery_receipt_allowance` decimal(21,9) not null default 0, MODIFY `opening_stock` decimal(21,9) not null default 0
+2025-07-30 13:21:46,013 WARNING database DDL Query made to DB:
 ALTER TABLE `tabQuotation` ADD COLUMN `cost_center` varchar(140)
-2025-07-30 13:11:03,854 WARNING database DDL Query made to DB:
-ALTER TABLE `tabQuotation` MODIFY `conversion_rate` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `additional_discount_percentage` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0, MODIFY `base_net_total` decimal(21,9) not null default 0, MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `base_grand_total` decimal(21,9) not null default 0, MODIFY `rounding_adjustment` decimal(21,9) not null default 0, MODIFY `rounded_total` decimal(21,9) not null default 0, MODIFY `base_discount_amount` decimal(21,9) not null default 0, MODIFY `base_rounding_adjustment` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `total_net_weight` decimal(21,9) not null default 0, MODIFY `plc_conversion_rate` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0
-2025-07-30 13:11:04,040 WARNING database DDL Query made to DB:
+2025-07-30 13:21:46,020 WARNING database DDL Query made to DB:
+ALTER TABLE `tabQuotation` MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `conversion_rate` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `base_grand_total` decimal(21,9) not null default 0, MODIFY `base_discount_amount` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0, MODIFY `rounded_total` decimal(21,9) not null default 0, MODIFY `base_rounding_adjustment` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0, MODIFY `base_net_total` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `plc_conversion_rate` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `rounding_adjustment` decimal(21,9) not null default 0, MODIFY `additional_discount_percentage` decimal(21,9) not null default 0, MODIFY `total_net_weight` decimal(21,9) not null default 0, MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0
+2025-07-30 13:21:46,082 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMaterial Request` ADD COLUMN `sales_invoice` varchar(140)
+2025-07-30 13:21:46,091 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMaterial Request` MODIFY `per_received` decimal(21,9) not null default 0, MODIFY `per_ordered` decimal(21,9) not null default 0
+2025-07-30 13:21:46,191 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSales Invoice` ADD COLUMN `lease` varchar(140), ADD COLUMN `lease_item` varchar(140), ADD COLUMN `job_card` varchar(140)
+2025-07-30 13:21:46,200 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSales Invoice` MODIFY `loyalty_amount` decimal(21,9) not null default 0, MODIFY `write_off_amount` decimal(21,9) not null default 0, MODIFY `base_net_total` decimal(21,9) not null default 0, MODIFY `base_write_off_amount` decimal(21,9) not null default 0, MODIFY `plc_conversion_rate` decimal(21,9) not null default 0, MODIFY `rounding_adjustment` decimal(21,9) not null default 0, MODIFY `commission_rate` decimal(21,9) not null default 0, MODIFY `base_total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `total_commission` decimal(21,9) not null default 0, MODIFY `rounded_total` decimal(21,9) not null default 0, MODIFY `base_discount_amount` decimal(21,9) not null default 0, MODIFY `outstanding_amount` decimal(21,9) not null default 0, MODIFY `conversion_rate` decimal(21,9) not null default 0, MODIFY `amount_eligible_for_commission` decimal(21,9) not null default 0, MODIFY `base_rounding_adjustment` decimal(21,9) not null default 0, MODIFY `total_advance` decimal(21,9) not null default 0, MODIFY `total_taxes_and_charges` decimal(21,9) not null default 0, MODIFY `total_net_weight` decimal(21,9) not null default 0, MODIFY `total` decimal(21,9) not null default 0, MODIFY `base_grand_total` decimal(21,9) not null default 0, MODIFY `base_rounded_total` decimal(21,9) not null default 0, MODIFY `total_billing_hours` decimal(21,9) not null default 0, MODIFY `paid_amount` decimal(21,9) not null default 0, MODIFY `total_qty` decimal(21,9) not null default 0, MODIFY `net_total` decimal(21,9) not null default 0, MODIFY `grand_total` decimal(21,9) not null default 0, MODIFY `additional_discount_percentage` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `base_paid_amount` decimal(21,9) not null default 0, MODIFY `change_amount` decimal(21,9) not null default 0, MODIFY `base_change_amount` decimal(21,9) not null default 0, MODIFY `base_total` decimal(21,9) not null default 0
+2025-07-30 13:21:46,268 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIssue` ADD COLUMN `property_name` varchar(140), ADD COLUMN `person_in_charge` varchar(140), ADD COLUMN `sub_contractor_contact` varchar(140), ADD COLUMN `person_in_charge_name` varchar(140), ADD COLUMN `sub_contractor_name` varchar(140), ADD COLUMN `defect_found` longtext, ADD COLUMN `customer_feedback` longtext
+2025-07-30 13:21:46,275 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIssue` MODIFY `first_response_time` decimal(21,9), MODIFY `resolution_time` decimal(21,9), MODIFY `total_hold_time` decimal(21,9), MODIFY `avg_response_time` decimal(21,9), MODIFY `user_resolution_time` decimal(21,9)
+2025-07-30 13:21:46,332 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIssue Materials Detail` ADD COLUMN `mateiral_request` varchar(140)
+2025-07-30 13:21:46,340 WARNING database DDL Query made to DB:
+ALTER TABLE `tabIssue Materials Detail` MODIFY `rate` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0
+2025-07-30 13:21:46,526 WARNING database DDL Query made to DB:
 ALTER TABLE `tabProperty` ADD COLUMN `territory` varchar(140)
-2025-07-30 13:11:04,051 WARNING database DDL Query made to DB:
-ALTER TABLE `tabProperty` MODIFY `security_deposit` decimal(21,9) not null default 0, MODIFY `builtup_area` decimal(21,9) not null default 0, MODIFY `carpet_area` decimal(21,9) not null default 0, MODIFY `rent` decimal(21,9) not null default 0
-2025-07-30 13:11:10,020 WARNING database DDL Query made to DB:
+2025-07-30 13:21:46,534 WARNING database DDL Query made to DB:
+ALTER TABLE `tabProperty` MODIFY `builtup_area` decimal(21,9) not null default 0, MODIFY `security_deposit` decimal(21,9) not null default 0, MODIFY `rent` decimal(21,9) not null default 0, MODIFY `carpet_area` decimal(21,9) not null default 0
+2025-07-30 13:21:52,423 WARNING database DDL Query made to DB:
 create table `tabDrug Prescription` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -68,7 +68,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:10,214 WARNING database DDL Query made to DB:
+2025-07-30 13:21:52,610 WARNING database DDL Query made to DB:
 create table `tabExercise Type Step` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -88,7 +88,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:10,346 WARNING database DDL Query made to DB:
+2025-07-30 13:21:52,737 WARNING database DDL Query made to DB:
 create table `tabExercise Difficulty Level` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -107,7 +107,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:10,521 WARNING database DDL Query made to DB:
+2025-07-30 13:21:52,907 WARNING database DDL Query made to DB:
 create table `tabTherapy Type` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -141,7 +141,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:10,706 WARNING database DDL Query made to DB:
+2025-07-30 13:21:53,094 WARNING database DDL Query made to DB:
 create table `tabDescriptive Test Result` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -163,7 +163,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:10,819 WARNING database DDL Query made to DB:
+2025-07-30 13:21:53,208 WARNING database DDL Query made to DB:
 create table `tabPatient Relation` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -184,7 +184,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:10,955 WARNING database DDL Query made to DB:
+2025-07-30 13:21:53,339 WARNING database DDL Query made to DB:
 create table `tabHealthcare Service Unit Type` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -216,7 +216,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:11,086 WARNING database DDL Query made to DB:
+2025-07-30 13:21:53,483 WARNING database DDL Query made to DB:
 create table `tabExercise` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -238,7 +238,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:11,217 WARNING database DDL Query made to DB:
+2025-07-30 13:21:53,615 WARNING database DDL Query made to DB:
 create table `tabNursing Checklist Template` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -259,7 +259,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:11,362 WARNING database DDL Query made to DB:
+2025-07-30 13:21:53,754 WARNING database DDL Query made to DB:
 create table `tabDiagnosis` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -279,7 +279,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:11,604 WARNING database DDL Query made to DB:
+2025-07-30 13:21:53,976 WARNING database DDL Query made to DB:
 create table `tabPatient Encounter Diagnosis` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -297,7 +297,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:11,733 WARNING database DDL Query made to DB:
+2025-07-30 13:21:54,100 WARNING database DDL Query made to DB:
 create table `tabNursing Checklist Template Task` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -322,7 +322,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:11,885 WARNING database DDL Query made to DB:
+2025-07-30 13:21:54,240 WARNING database DDL Query made to DB:
 create table `tabInpatient Medication Order` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -354,7 +354,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:12,022 WARNING database DDL Query made to DB:
+2025-07-30 13:21:54,379 WARNING database DDL Query made to DB:
 create table `tabObservation Component` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -376,7 +376,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:12,204 WARNING database DDL Query made to DB:
+2025-07-30 13:21:54,543 WARNING database DDL Query made to DB:
 create table `tabHealthcare Practitioner` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -425,7 +425,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:12,387 WARNING database DDL Query made to DB:
+2025-07-30 13:21:54,718 WARNING database DDL Query made to DB:
 create table `tabPrescription Dosage` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -444,7 +444,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:12,536 WARNING database DDL Query made to DB:
+2025-07-30 13:21:54,868 WARNING database DDL Query made to DB:
 create table `tabInpatient Occupancy` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -467,7 +467,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:12,663 WARNING database DDL Query made to DB:
+2025-07-30 13:21:54,984 WARNING database DDL Query made to DB:
 create table `tabCode Value Set` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -490,7 +490,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:12,807 WARNING database DDL Query made to DB:
+2025-07-30 13:21:55,118 WARNING database DDL Query made to DB:
 create table `tabInpatient Medication Order Entry` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -515,7 +515,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:12,942 WARNING database DDL Query made to DB:
+2025-07-30 13:21:55,261 WARNING database DDL Query made to DB:
 create table `tabExercise Type` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -538,7 +538,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:13,123 WARNING database DDL Query made to DB:
+2025-07-30 13:21:55,441 WARNING database DDL Query made to DB:
 create table `tabHealthcare Service Unit` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -574,10 +574,10 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:13,230 WARNING database DDL Query made to DB:
+2025-07-30 13:21:55,540 WARNING database DDL Query made to DB:
 alter table `tabHealthcare Service Unit`
 					add unique `unique_service_unit_company`(healthcare_service_unit_name, company)
-2025-07-30 13:11:13,316 WARNING database DDL Query made to DB:
+2025-07-30 13:21:55,638 WARNING database DDL Query made to DB:
 create table `tabCode Value` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -614,7 +614,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:13,469 WARNING database DDL Query made to DB:
+2025-07-30 13:21:55,790 WARNING database DDL Query made to DB:
 create table `tabDosage Strength` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -633,7 +633,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:13,615 WARNING database DDL Query made to DB:
+2025-07-30 13:21:55,925 WARNING database DDL Query made to DB:
 create table `tabClinical Procedure Item` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -663,7 +663,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:13,726 WARNING database DDL Query made to DB:
+2025-07-30 13:21:56,046 WARNING database DDL Query made to DB:
 create table `tabOrganism Test Item` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -683,7 +683,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:13,915 WARNING database DDL Query made to DB:
+2025-07-30 13:21:56,232 WARNING database DDL Query made to DB:
 create table `tabInpatient Record` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -734,7 +734,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:14,136 WARNING database DDL Query made to DB:
+2025-07-30 13:21:56,460 WARNING database DDL Query made to DB:
 create table `tabPatient Appointment` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -799,7 +799,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:14,306 WARNING database DDL Query made to DB:
+2025-07-30 13:21:56,633 WARNING database DDL Query made to DB:
 create table `tabPatient Assessment` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -830,7 +830,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:14,445 WARNING database DDL Query made to DB:
+2025-07-30 13:21:56,768 WARNING database DDL Query made to DB:
 create table `tabPatient History Standard Document Type` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -850,7 +850,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:14,753 WARNING database DDL Query made to DB:
+2025-07-30 13:21:57,051 WARNING database DDL Query made to DB:
 create table `tabPrescription Duration` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -870,7 +870,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:14,918 WARNING database DDL Query made to DB:
+2025-07-30 13:21:57,207 WARNING database DDL Query made to DB:
 create table `tabProcedure Prescription` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -903,7 +903,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:15,050 WARNING database DDL Query made to DB:
+2025-07-30 13:21:57,331 WARNING database DDL Query made to DB:
 create table `tabService Request Category` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -924,7 +924,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:15,238 WARNING database DDL Query made to DB:
+2025-07-30 13:21:57,518 WARNING database DDL Query made to DB:
 create table `tabTherapy Plan Template` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -951,7 +951,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:15,383 WARNING database DDL Query made to DB:
+2025-07-30 13:21:57,668 WARNING database DDL Query made to DB:
 create table `tabSpecimen` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -978,7 +978,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:15,574 WARNING database DDL Query made to DB:
+2025-07-30 13:21:57,848 WARNING database DDL Query made to DB:
 create table `tabPatient Encounter` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1024,7 +1024,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:15,730 WARNING database DDL Query made to DB:
+2025-07-30 13:21:58,003 WARNING database DDL Query made to DB:
 create table `tabDiagnostic Report` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1058,7 +1058,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:15,859 WARNING database DDL Query made to DB:
+2025-07-30 13:21:58,136 WARNING database DDL Query made to DB:
 create table `tabMedical Department` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1078,7 +1078,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:16,020 WARNING database DDL Query made to DB:
+2025-07-30 13:21:58,296 WARNING database DDL Query made to DB:
 create table `tabPatient Assessment Parameter` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1097,7 +1097,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:16,145 WARNING database DDL Query made to DB:
+2025-07-30 13:21:58,429 WARNING database DDL Query made to DB:
 create table `tabSensitivity` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1116,7 +1116,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:16,281 WARNING database DDL Query made to DB:
+2025-07-30 13:21:58,568 WARNING database DDL Query made to DB:
 create table `tabTreatment Plan Template Practitioner` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1134,7 +1134,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:16,414 WARNING database DDL Query made to DB:
+2025-07-30 13:21:58,703 WARNING database DDL Query made to DB:
 create table `tabCodification Table` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1159,7 +1159,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:16,567 WARNING database DDL Query made to DB:
+2025-07-30 13:21:58,843 WARNING database DDL Query made to DB:
 create table `tabNormal Test Result` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1191,7 +1191,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:16,704 WARNING database DDL Query made to DB:
+2025-07-30 13:21:58,968 WARNING database DDL Query made to DB:
 create table `tabLab Prescription` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1220,7 +1220,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:16,851 WARNING database DDL Query made to DB:
+2025-07-30 13:21:59,120 WARNING database DDL Query made to DB:
 create table `tabPatient Medical Record` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1252,7 +1252,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:16,982 WARNING database DDL Query made to DB:
+2025-07-30 13:21:59,253 WARNING database DDL Query made to DB:
 create table `tabTreatment Plan Template Item` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1273,7 +1273,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:17,111 WARNING database DDL Query made to DB:
+2025-07-30 13:21:59,380 WARNING database DDL Query made to DB:
 create table `tabPractitioner Schedule` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1294,7 +1294,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:17,249 WARNING database DDL Query made to DB:
+2025-07-30 13:21:59,511 WARNING database DDL Query made to DB:
 create table `tabLab Test Sample` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1316,7 +1316,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:17,385 WARNING database DDL Query made to DB:
+2025-07-30 13:21:59,641 WARNING database DDL Query made to DB:
 create table `tabDescriptive Test Template` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1335,7 +1335,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:17,513 WARNING database DDL Query made to DB:
+2025-07-30 13:21:59,764 WARNING database DDL Query made to DB:
 create table `tabAntibiotic` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1355,7 +1355,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:17,650 WARNING database DDL Query made to DB:
+2025-07-30 13:21:59,892 WARNING database DDL Query made to DB:
 create table `tabMedication Class` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1374,7 +1374,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:17,804 WARNING database DDL Query made to DB:
+2025-07-30 13:22:00,045 WARNING database DDL Query made to DB:
 create table `tabTreatment Plan Template` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1401,7 +1401,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:17,941 WARNING database DDL Query made to DB:
+2025-07-30 13:22:00,190 WARNING database DDL Query made to DB:
 create table `tabOrganism` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1421,7 +1421,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:18,089 WARNING database DDL Query made to DB:
+2025-07-30 13:22:00,322 WARNING database DDL Query made to DB:
 create table `tabPatient Care Type` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1441,7 +1441,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:18,257 WARNING database DDL Query made to DB:
+2025-07-30 13:22:00,482 WARNING database DDL Query made to DB:
 create table `tabService Request Reason` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1460,7 +1460,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:18,419 WARNING database DDL Query made to DB:
+2025-07-30 13:22:00,656 WARNING database DDL Query made to DB:
 create table `tabPatient Assessment Sheet` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1481,7 +1481,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:18,586 WARNING database DDL Query made to DB:
+2025-07-30 13:22:00,811 WARNING database DDL Query made to DB:
 create table `tabVital Signs` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1525,7 +1525,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:18,743 WARNING database DDL Query made to DB:
+2025-07-30 13:22:00,952 WARNING database DDL Query made to DB:
 create table `tabNormal Test Template` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1548,7 +1548,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:18,953 WARNING database DDL Query made to DB:
+2025-07-30 13:22:01,148 WARNING database DDL Query made to DB:
 create table `tabObservation Reference Range` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1612,7 +1612,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:19,118 WARNING database DDL Query made to DB:
+2025-07-30 13:22:01,294 WARNING database DDL Query made to DB:
 create table `tabCode System` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1644,7 +1644,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:19,307 WARNING database DDL Query made to DB:
+2025-07-30 13:22:01,482 WARNING database DDL Query made to DB:
 create table `tabLab Test Group Template` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1671,7 +1671,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:19,449 WARNING database DDL Query made to DB:
+2025-07-30 13:22:01,624 WARNING database DDL Query made to DB:
 create table `tabInpatient Medication Entry` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1705,7 +1705,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:19,615 WARNING database DDL Query made to DB:
+2025-07-30 13:22:01,791 WARNING database DDL Query made to DB:
 create table `tabMedication` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1740,7 +1740,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:19,839 WARNING database DDL Query made to DB:
+2025-07-30 13:22:01,986 WARNING database DDL Query made to DB:
 create table `tabTherapy Session` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1780,7 +1780,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:19,979 WARNING database DDL Query made to DB:
+2025-07-30 13:22:02,215 WARNING database DDL Query made to DB:
 create table `tabPatient Assessment Detail` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1798,7 +1798,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:20,187 WARNING database DDL Query made to DB:
+2025-07-30 13:22:02,433 WARNING database DDL Query made to DB:
 create table `tabMedication Request` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1868,7 +1868,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:20,466 WARNING database DDL Query made to DB:
+2025-07-30 13:22:02,703 WARNING database DDL Query made to DB:
 create table `tabObservation` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1942,7 +1942,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:20,639 WARNING database DDL Query made to DB:
+2025-07-30 13:22:02,870 WARNING database DDL Query made to DB:
 create table `tabTherapy Plan` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -1971,9 +1971,9 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:20,833 WARNING database DDL Query made to DB:
+2025-07-30 13:22:03,056 WARNING database DDL Query made to DB:
 create sequence if not exists observation_sample_collection_id_seq nocache nocycle
-2025-07-30 13:11:20,843 WARNING database DDL Query made to DB:
+2025-07-30 13:22:03,064 WARNING database DDL Query made to DB:
 create table `tabObservation Sample Collection` (
 			name bigint primary key,
 			creation datetime(6),
@@ -2010,7 +2010,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:21,009 WARNING database DDL Query made to DB:
+2025-07-30 13:22:03,229 WARNING database DDL Query made to DB:
 create table `tabClinical Procedure Template` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2050,7 +2050,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:21,185 WARNING database DDL Query made to DB:
+2025-07-30 13:22:03,396 WARNING database DDL Query made to DB:
 create table `tabAppointment Type` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2073,7 +2073,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:21,314 WARNING database DDL Query made to DB:
+2025-07-30 13:22:03,533 WARNING database DDL Query made to DB:
 create table `tabPatient Encounter Symptom` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2091,7 +2091,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:21,459 WARNING database DDL Query made to DB:
+2025-07-30 13:22:03,678 WARNING database DDL Query made to DB:
 create table `tabABDM Settings` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2118,7 +2118,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:21,598 WARNING database DDL Query made to DB:
+2025-07-30 13:22:03,813 WARNING database DDL Query made to DB:
 create table `tabDosage Form` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2137,7 +2137,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:21,757 WARNING database DDL Query made to DB:
+2025-07-30 13:22:03,970 WARNING database DDL Query made to DB:
 create table `tabHealthcare Activity` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2160,7 +2160,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:21,996 WARNING database DDL Query made to DB:
+2025-07-30 13:22:04,205 WARNING database DDL Query made to DB:
 create table `tabLab Test` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2237,7 +2237,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:22,247 WARNING database DDL Query made to DB:
+2025-07-30 13:22:04,449 WARNING database DDL Query made to DB:
 create table `tabLab Test Template` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2286,7 +2286,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:22,386 WARNING database DDL Query made to DB:
+2025-07-30 13:22:04,592 WARNING database DDL Query made to DB:
 create table `tabLab Test UOM` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2306,7 +2306,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:22,523 WARNING database DDL Query made to DB:
+2025-07-30 13:22:04,735 WARNING database DDL Query made to DB:
 create table `tabSample Type` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2325,7 +2325,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:22,650 WARNING database DDL Query made to DB:
+2025-07-30 13:22:04,868 WARNING database DDL Query made to DB:
 create table `tabOrganism Test Result` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2345,7 +2345,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:22,772 WARNING database DDL Query made to DB:
+2025-07-30 13:22:04,984 WARNING database DDL Query made to DB:
 create table `tabFee Validity Reference` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2363,7 +2363,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:22,950 WARNING database DDL Query made to DB:
+2025-07-30 13:22:05,152 WARNING database DDL Query made to DB:
 create table `tabSample Collection` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2408,7 +2408,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:23,088 WARNING database DDL Query made to DB:
+2025-07-30 13:22:05,291 WARNING database DDL Query made to DB:
 create table `tabClinical Note Type` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2427,7 +2427,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:23,220 WARNING database DDL Query made to DB:
+2025-07-30 13:22:05,439 WARNING database DDL Query made to DB:
 create table `tabPatient Assessment Template` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2449,7 +2449,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:23,386 WARNING database DDL Query made to DB:
+2025-07-30 13:22:05,618 WARNING database DDL Query made to DB:
 create table `tabFee Validity` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2479,7 +2479,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:23,528 WARNING database DDL Query made to DB:
+2025-07-30 13:22:05,758 WARNING database DDL Query made to DB:
 create table `tabMedication Linked Item` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2506,7 +2506,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:23,735 WARNING database DDL Query made to DB:
+2025-07-30 13:22:05,973 WARNING database DDL Query made to DB:
 create table `tabService Request` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2579,7 +2579,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:23,888 WARNING database DDL Query made to DB:
+2025-07-30 13:22:06,141 WARNING database DDL Query made to DB:
 create table `tabSensitivity Test Result` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2598,7 +2598,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:24,016 WARNING database DDL Query made to DB:
+2025-07-30 13:22:06,260 WARNING database DDL Query made to DB:
 create table `tabAppointment Type Service Item` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2621,7 +2621,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:24,136 WARNING database DDL Query made to DB:
+2025-07-30 13:22:06,375 WARNING database DDL Query made to DB:
 create table `tabMedication Ingredient` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2641,7 +2641,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:24,286 WARNING database DDL Query made to DB:
+2025-07-30 13:22:06,519 WARNING database DDL Query made to DB:
 create table `tabInpatient Medication Entry Detail` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2671,7 +2671,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:24,412 WARNING database DDL Query made to DB:
+2025-07-30 13:22:06,654 WARNING database DDL Query made to DB:
 create table `tabABDM Request` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2697,7 +2697,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:24,538 WARNING database DDL Query made to DB:
+2025-07-30 13:22:06,794 WARNING database DDL Query made to DB:
 create table `tabComplaint` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2716,7 +2716,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:24,751 WARNING database DDL Query made to DB:
+2025-07-30 13:22:07,014 WARNING database DDL Query made to DB:
 create table `tabObservation Template` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2768,7 +2768,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:24,892 WARNING database DDL Query made to DB:
+2025-07-30 13:22:07,146 WARNING database DDL Query made to DB:
 create table `tabPatient History Custom Document Type` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2788,7 +2788,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:25,016 WARNING database DDL Query made to DB:
+2025-07-30 13:22:07,275 WARNING database DDL Query made to DB:
 create table `tabHealthcare Schedule Time Slot` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2810,7 +2810,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:25,222 WARNING database DDL Query made to DB:
+2025-07-30 13:22:07,476 WARNING database DDL Query made to DB:
 create table `tabPatient` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2867,7 +2867,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:25,386 WARNING database DDL Query made to DB:
+2025-07-30 13:22:07,643 WARNING database DDL Query made to DB:
 create table `tabBody Part` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2886,7 +2886,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:25,561 WARNING database DDL Query made to DB:
+2025-07-30 13:22:07,814 WARNING database DDL Query made to DB:
 create table `tabClinical Procedure` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2933,7 +2933,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:25,767 WARNING database DDL Query made to DB:
+2025-07-30 13:22:08,026 WARNING database DDL Query made to DB:
 create table `tabNursing Task` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2980,7 +2980,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:25,934 WARNING database DDL Query made to DB:
+2025-07-30 13:22:08,186 WARNING database DDL Query made to DB:
 create table `tabPractitioner Service Unit Schedule` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -2999,7 +2999,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:26,067 WARNING database DDL Query made to DB:
+2025-07-30 13:22:08,312 WARNING database DDL Query made to DB:
 create table `tabTherapy Plan Detail` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -3023,7 +3023,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:26,223 WARNING database DDL Query made to DB:
+2025-07-30 13:22:08,461 WARNING database DDL Query made to DB:
 create table `tabClinical Note` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -3052,7 +3052,7 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:26,356 WARNING database DDL Query made to DB:
+2025-07-30 13:22:08,591 WARNING database DDL Query made to DB:
 create table `tabTherapy Plan Template Detail` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -3073,7 +3073,7 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:26,479 WARNING database DDL Query made to DB:
+2025-07-30 13:22:08,711 WARNING database DDL Query made to DB:
 create table `tabBody Part Link` (
 			name varchar(140) primary key,
 			creation datetime(6),
@@ -3091,5 +3091,5 @@ index parent(parent))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
-2025-07-30 13:11:32,582 WARNING database DDL Query made to DB:
-ALTER TABLE `tabSales Invoice` ADD COLUMN `patient` varchar(140), ADD COLUMN `patient_name` varchar(140), ADD COLUMN `ref_practitioner` varchar(140), ADD COLUMN `service_unit` varchar(140)
+2025-07-30 13:22:14,836 WARNING database DDL Query made to DB:
+ALTER TABLE `tabStock Entry Detail` ADD COLUMN `patient` varchar(140), ADD COLUMN `inpatient_medication_entry_child` varchar(140)
