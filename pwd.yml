@@ -314,7 +314,7 @@ volumes:
     name: ${SITES_VOLUME:-sites}
   logs:
     name: ${LOGS_VOLUME:-logs}
-  apps: {}  
+  apps: {}
 
 networks:
   frappe_network:
